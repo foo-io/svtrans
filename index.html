@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  	<title>СВ Транс</title>
+    <link rel="stylesheet" href="dist/fonts/stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="body">
+      <div class="header">
+        <div class="header_top">
+          <div class="container">
+            <div class="header_top__inner">
+              <div class="header_top_left">
+                <div class="header_top__logo">
+                  <a href="#">
+                    <img src="img/logo.svg" alt="СВ Транс">
+                  </a>
+                </div>
+                <div class="header_top__menu">
+                  <ul>
+                    <li><a href="#" class="text-medium blue">ЧАСТНЫМ ЛИЦАМ</a></li>
+                    <li><a href="#" class="text-medium grey">БИЗНЕСУ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header_top_right">
+                <div class="header_top__login">
+                  <a href="#" class="login_top">
+                    <div class="login_top__icon">
+                      <img src="" alt="">
+                    </div>
+                    <span class="login_top__text text-medium blue">
+                      Войти в ЛК
+                    </span>
+                  </a>
+                </div>
+                <div class="header_top__search">
+                  <a href="#" class="top_search">
+                    <img src="" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_bottom">
+          <div class="container">
+            <div class="header_bottom__inner">
+              <div class="header_bottom__menu">
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li>
+                    <a href="#"></a>
+                    <ul>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#"></a>
+                    <ul>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="slider">
+          <div class="container">
+            <div class="slider__inner">
+              <div class="slider__img">
+
+              </div>
+              <div class="slider__text">
+                <div class="slider__title">
+                  <h2>Полный комплекс по организации мультимодальных перевозок — </h2>
+                </div>
+                <div class="slider__desc">
+                  <span>авиаперевозки грузов по России, международные авиаперевозки, складская обработка и хранение груза.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc">
+          <div class="container">
+            <div class="calc_form">
+
+              <div id="app">
+                <template>
+                  <div>
+                    <v-tabs
+                      background-color="#0EA6E7"
+                    >
+                      <v-tab>
+                        Купить авиабилеты
+                      </v-tab>
+                      <v-tab>
+                        Рассчитать грузоперевозку
+                      </v-tab>
+
+                      <v-tab-item>
+                        <v-card>
+                          <form class="form_one" action="index.html" method="post">
+                            <div class="form_one__method">
+                              <button type="button" name="button">В одну сторону</button>
+                              <button type="button" name="button">Туда и обратно</button>
+                              <button type="button" name="button">Сложный маршрут</button>
+                            </div>
+                            <div class="form_one__content content-race">
+                              <div class="content-race__form">
+
+                              </div>
+                              <v-container class="content-race__check" v-model="row" row>
+                                <div class="check-one__item">
+                                  <v-container fluid row>
+                                    <v-checkbox v-model="checkbox1" label="Без пересадок"></v-checkbox>
+                                    <v-checkbox v-model="checkbox2" label="± 3 дня"></v-checkbox>
+                                  </v-container>
+                                </div>
+                                <div class="check-one__item">
+                                  <v-container fluid>
+                                    <v-radio-group row v-model="ex7" :mandatory="true">
+                                      <v-radio label="Все рейсы" color="red" value="flights-1"></v-radio>
+                                      <v-radio label="Регулярные" color="red" value="flights-2"></v-radio>
+                                      <v-radio label="Чартеры" color="red" value="flights-3"></v-radio>
+                                    </v-radio-group>
+                                  </v-container>
+                                </div>
+                              </v-container>
+                            </div>
+                            <div class="form_one__bottom">
+                              <div class="form_one__col">
+                                <div class="col_item">
+                                  <div class="col_item__text">
+                                    <span class="white">Взрослые</span>
+                                    <span class="grey">(от 12)</span>
+                                  </div>
+                                  <div class="col_item__input">
+                                    <div class="input_minus input_button">
+                                      <img src="img/minus.svg" alt="">
+                                    </div>
+                                    <input type="text" name="" value="">
+                                    <div class="input_plus input_button active">
+                                      <img src="img/plus.svg" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form_one__button">
+                                <div class="button-white">
+                                  <v-btn
+                                    class="ma-2"
+                                    :loading="loading"
+                                    :disabled="loading"
+                                    color="secondary"
+                                    @click="loader = 'loading'"
+                                  >
+                                    Accept Terms
+                                  </v-btn>
+                                </div>
+
+                              </div>
+                            </div>
+                          </form>
+                        </v-card>
+                      </v-tab-item>
+                      <v-tab-item>
+                        <v-card
+                          flat
+                          tile
+                        >
+                          <v-card-text>{{ text }}</v-card-text>
+                        </v-card>
+                      </v-tab-item>
+                    </v-tabs>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container">
+
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: '.body',
+        vuetify: new Vuetify(),
+        data () {
+          return {
+            loader: null,
+            loading: false,
+            tab: null,
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            tabs: 2,
+            checkbox1: false,
+            checkbox2: false,
+            radios: 'radio-1',
+            ex7: 'red',
+          }
+        },
+        watch: {
+          loader () {
+            const l = this.loader
+            this[l] = !this[l]
+
+            setTimeout(() => (this[l] = false), 1000)
+
+            this.loader = null
+          },
+        },
+      })
+    </script>
+    <!-- <script src="dist/main.js"></script> -->
+  </body>
+</html>

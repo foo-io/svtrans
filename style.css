@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+}
+:-ms-input-placeholder,
+::-ms-input-placeholder,
+::placeholder {
+	color: #4F4F4F;
+}
+body {
+	font-size: 14px;
+	color: #4F4F4F;
+	font-weight: 400;
+	font-family: "TT Norms", sans-serif;
+}
+ol,
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #4F4F4F;
+}
+a:hover {
+	text-decoration: none;
+	color: #4F4F4F;
+}
+.text-medium {
+	font-weight: 500;
+}
+.text-bold {
+	font-weight: bold;
+}
+.blue {
+	color: #0EA6E7;
+}
+.grey {
+	color: #647C92;
+}
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	z-index: 111;
+}
+.container {
+	max-width: 1136px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0;
+}
+.bold {
+	font-weight: bold;
+}
+.header_top {
+	background: #EEF0F4;
+}
+.header_top_left {
+	display: flex;
+	flex-direction: row;
+}
+.form_one {
+	background-color: #0EA6E7;
+}
+.check-one__item label {
+	color: #fff;
+}
+.header_top__inner {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.header_top__menu ul {
+	display: flex;
+	flex-direction: row;
+}
+.header_top__menu ul li {
+	padding-right: 24px;
+}
+.header_top__menu ul li a {
+	display: flex;
+	padding-top: 20px;
+	padding-bottom: 22px;
+}
+.header_top__menu ul li:first-child a {
+	border-bottom: 2px solid #0EA6E7;
+}
+.header_top__inner {
+
+}
+.header_top__menu {
+	display: flex;
+	align-items: center;
+}
+.header_top__logo {
+  padding-right: 32px;
+  padding-top: 15px;
+}
