@@ -91,9 +91,6 @@ a:hover {
 .header_top__menu ul li:first-child a {
 	border-bottom: 2px solid #0EA6E7;
 }
-.header_top__inner {
-
-}
 .header_top__menu {
 	display: flex;
 	align-items: center;
@@ -101,4 +98,40 @@ a:hover {
 .header_top__logo {
   padding-right: 32px;
   padding-top: 15px;
+}
+/* slider */
+.slider .v-carousel__controls {
+	background: transparent;
+	justify-content: flex-end;
+	bottom: 60px;
+}
+.slider .theme--dark.v-image {
+	width: 600px;
+	border-radius: 50%;
+}
+.header {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+.header_bottom__menu ul {
+	display: flex;
+	flex-direction: row;
+}
+.header_bottom__menu ul > li {
+	padding-right: 24px;
+}
+.header_bottom__menu ul > li > a {
+	display: flex;
+	padding: 16px 0;
+	font-size: 16px;
+	line-height: 19px;
+	color: #647C92;
+}
+.dropdown-button {
+	display: flex;
+	padding: 16px 0;
+	font-size: 16px;
+	line-height: 19px;
+	color: #647C92;
 }

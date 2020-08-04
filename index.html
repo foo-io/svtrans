@@ -53,23 +53,32 @@
           <div class="container">
             <div class="header_bottom__inner">
               <div class="header_bottom__menu">
-                <ul>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
+                <ul id="menu">
+                  <li><a href="#">Купить билет</a></li>
+                  <li><a href="#">Грузовые перевозки</a></li>
                   <li>
-                    <a href="#"></a>
-                    <ul>
-                      <li><a href=""></a></li>
-                      <li><a href=""></a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#"></a>
-                    <ul>
-                      <li><a href=""></a></li>
-                      <li><a href=""></a></li>
-                    </ul>
+                    <template>
+                      <v-menu offset-y>
+                        <template v-slot:activator="{ on, attrs }">
+                          <div
+                          class="dropdown-button"
+                            v-bind="attrs"
+                            v-on="on"
+                          >
+                            Документы и справка
+                          </div>
+                        </template>
+                        <v-list>
+                          <v-list-item
+                            v-for="(item, index) in items"
+                            :key="index"
+                            @click=""
+                          >
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                          </v-list-item>
+                        </v-list>
+                      </v-menu>
+                    </template>
                   </li>
                 </ul>
               </div>
@@ -78,119 +87,27 @@
         </div>
       </div>
       <div class="main">
-        <div class="slider">
+        <v-app class="slider" id="slider">
           <div class="container">
-            <div class="slider__inner">
-              <div class="slider__img">
+            <template>
+              <v-carousel :show-arrows="false" height="600px">
+                <v-carousel-item
+                  v-for="(item,i) in items"
+                  :key="i"
+                  :src="item.src"
 
-              </div>
-              <div class="slider__text">
-                <div class="slider__title">
-                  <h2>Полный комплекс по организации мультимодальных перевозок — </h2>
-                </div>
-                <div class="slider__desc">
-                  <span>авиаперевозки грузов по России, международные авиаперевозки, складская обработка и хранение груза.</span>
-                </div>
-              </div>
-            </div>
+                  reverse-transition="fade-transition"
+                  transition="fade-transition"
+                ></v-carousel-item>
+              </v-carousel>
+            </template>
           </div>
-        </div>
+        </v-app>
 
         <div class="calc">
           <div class="container">
             <div class="calc_form">
 
-              <div id="app">
-                <template>
-                  <div>
-                    <v-tabs
-                      background-color="#0EA6E7"
-                    >
-                      <v-tab>
-                        Купить авиабилеты
-                      </v-tab>
-                      <v-tab>
-                        Рассчитать грузоперевозку
-                      </v-tab>
-
-                      <v-tab-item>
-                        <v-card>
-                          <form class="form_one" action="index.html" method="post">
-                            <div class="form_one__method">
-                              <button type="button" name="button">В одну сторону</button>
-                              <button type="button" name="button">Туда и обратно</button>
-                              <button type="button" name="button">Сложный маршрут</button>
-                            </div>
-                            <div class="form_one__content content-race">
-                              <div class="content-race__form">
-
-                              </div>
-                              <v-container class="content-race__check" v-model="row" row>
-                                <div class="check-one__item">
-                                  <v-container fluid row>
-                                    <v-checkbox v-model="checkbox1" label="Без пересадок"></v-checkbox>
-                                    <v-checkbox v-model="checkbox2" label="± 3 дня"></v-checkbox>
-                                  </v-container>
-                                </div>
-                                <div class="check-one__item">
-                                  <v-container fluid>
-                                    <v-radio-group row v-model="ex7" :mandatory="true">
-                                      <v-radio label="Все рейсы" color="red" value="flights-1"></v-radio>
-                                      <v-radio label="Регулярные" color="red" value="flights-2"></v-radio>
-                                      <v-radio label="Чартеры" color="red" value="flights-3"></v-radio>
-                                    </v-radio-group>
-                                  </v-container>
-                                </div>
-                              </v-container>
-                            </div>
-                            <div class="form_one__bottom">
-                              <div class="form_one__col">
-                                <div class="col_item">
-                                  <div class="col_item__text">
-                                    <span class="white">Взрослые</span>
-                                    <span class="grey">(от 12)</span>
-                                  </div>
-                                  <div class="col_item__input">
-                                    <div class="input_minus input_button">
-                                      <img src="img/minus.svg" alt="">
-                                    </div>
-                                    <input type="text" name="" value="">
-                                    <div class="input_plus input_button active">
-                                      <img src="img/plus.svg" alt="">
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="form_one__button">
-                                <div class="button-white">
-                                  <v-btn
-                                    class="ma-2"
-                                    :loading="loading"
-                                    :disabled="loading"
-                                    color="secondary"
-                                    @click="loader = 'loading'"
-                                  >
-                                    Accept Terms
-                                  </v-btn>
-                                </div>
-
-                              </div>
-                            </div>
-                          </form>
-                        </v-card>
-                      </v-tab-item>
-                      <v-tab-item>
-                        <v-card
-                          flat
-                          tile
-                        >
-                          <v-card-text>{{ text }}</v-card-text>
-                        </v-card>
-                      </v-tab-item>
-                    </v-tabs>
-                  </div>
-                </template>
-              </div>
             </div>
           </div>
         </div>
@@ -205,31 +122,36 @@
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <script>
       new Vue({
-        el: '.body',
+        el: '#slider',
         vuetify: new Vuetify(),
         data () {
           return {
-            loader: null,
-            loading: false,
-            tab: null,
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            tabs: 2,
-            checkbox1: false,
-            checkbox2: false,
-            radios: 'radio-1',
-            ex7: 'red',
+            items: [
+              {
+                src: 'img/slide1.png',
+              },
+              {
+                src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+              },
+              {
+                src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+              },
+              {
+                src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+              },
+            ],
           }
         },
-        watch: {
-          loader () {
-            const l = this.loader
-            this[l] = !this[l]
-
-            setTimeout(() => (this[l] = false), 1000)
-
-            this.loader = null
-          },
-        },
+      });
+      new Vue({
+        el: '#menu',
+        vuetify: new Vuetify(),
+        data: () => ({
+          items: [
+            { title: 'Документы' },
+            { title: 'Справка' },
+          ],
+        }),
       })
     </script>
     <!-- <script src="dist/main.js"></script> -->
