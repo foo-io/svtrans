@@ -6,12 +6,12 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   	<title>СВ Транс</title>
     <link rel="stylesheet" href="dist/fonts/stylesheet.css">
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/foundation/css/foundation.css">
+  	<link rel="stylesheet" href="dist/slick/slick.css" />
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="body">
+    <div class="body" id="app">
       <div class="header">
         <div class="header_top">
           <div class="container">
@@ -53,33 +53,18 @@
           <div class="container">
             <div class="header_bottom__inner">
               <div class="header_bottom__menu">
-                <ul id="menu">
+                <ul class="dropdown menu" data-dropdown-menu>
                   <li><a href="#">Купить билет</a></li>
                   <li><a href="#">Грузовые перевозки</a></li>
                   <li>
-                    <template>
-                      <v-menu offset-y>
-                        <template v-slot:activator="{ on, attrs }">
-                          <div
-                          class="dropdown-button"
-                            v-bind="attrs"
-                            v-on="on"
-                          >
-                            Документы и справка
-                          </div>
-                        </template>
-                        <v-list>
-                          <v-list-item
-                            v-for="(item, index) in items"
-                            :key="index"
-                            @click=""
-                          >
-                            <v-list-item-title>{{ item.title }}</v-list-item-title>
-                          </v-list-item>
-                        </v-list>
-                      </v-menu>
-                    </template>
+                    <a href="#">Документы и справка</a>
+                    <ul class="menu">
+                      <li><a href="#">Документы</a></li>
+                      <li><a href="#">справка</a></li>
+                    </ul>
                   </li>
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Контакты</a></li>
                 </ul>
               </div>
             </div>
@@ -87,22 +72,49 @@
         </div>
       </div>
       <div class="main">
-        <v-app class="slider" id="slider">
+        <div class="slider">
           <div class="container">
-            <template>
-              <v-carousel :show-arrows="false" height="600px">
-                <v-carousel-item
-                  v-for="(item,i) in items"
-                  :key="i"
-                  :src="item.src"
 
-                  reverse-transition="fade-transition"
-                  transition="fade-transition"
-                ></v-carousel-item>
-              </v-carousel>
-            </template>
+            <div class="slider-wrapper">
+              <div class="slider">
+                <div class="slide">
+                  <div class="slider__img" style="background-image:url(img/slide1.png)">
+
+                  </div>
+                  <div class="slider__text">
+                    <div class="slider__text-title">
+                      Полный комплекс по организации мультимодальных перевозок —
+                    </div>
+                    <div class="slider__text-desc">
+                      авиаперевозки грузов по России, международные авиаперевозки, складская обработка и хранение груза.
+                    </div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="slider__img" style="background-image:url(img/slide1.png)">
+
+                  </div>
+                  <div class="slider__text">
+                    <div class="slider__text-title">
+                      Полный комплекс по организации мультимодальных перевозок —
+                    </div>
+                    <div class="slider__text-desc">
+                      авиаперевозки грузов по России, международные авиаперевозки, складская обработка и хранение груза.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-round__wrap">
+                <svg class="progress" viewBox="0 0 110 110">
+                  <circle class="circle-bg" r="50" cx="55" cy="55"/>
+                  <circle class="circle-go" r="50" cx="55" cy="55"/>
+                  <text class="circle-tx" x="50%" y="70"> </text>
+                </svg>
+              </div>
+            </div>
+
           </div>
-        </v-app>
+        </div>
 
         <div class="calc">
           <div class="container">
@@ -114,46 +126,80 @@
       </div>
       <div class="footer">
         <div class="container">
-
+          <div class="footer_inner">
+            <div class="footer_info footer__block">
+              <div class="footer_logo">
+                <img src="img/footer_logo.svg" alt="">
+              </div>
+              <span class="footer_info__text">Есть вопросы?</span>
+              <div class="footer_mailto">
+                <div class="footer_mailto__text">
+                  <input class="input__text input__text-black" type="text" name="" value="" placeholder="Ваш телефон">
+                </div>
+                <div class="footer_mailto__button">
+                  <input class="input__submit btn" type="submit" name="" value="Отправить">
+                </div>
+              </div>
+              <div class="footer_mailto-info">
+                <span>Нажимая на кнопку вы соглашаетесь с <a href="#" class="blue">политикой конфиденциальности</a></span>
+              </div>
+            </div>
+            <div class="footer_menu footer__block">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li><a href="">Купить билет</a></li>
+                <li><a href="">Грузовые перевозки</a></li>
+                <li>
+                  <a href="#">Документы и справка</a>
+                  <ul class="menu">
+                    <li><a href="#">Документы</a></li>
+                    <li><a href="#">справка</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">О компании</a>
+                  <ul class="menu">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                  <ul class="menu">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">Спецпредложения</a></li>
+              </ul>
+            </div>
+            <div class="footer_contact footer__block">
+              <div class="footer_contact__content">
+                <ul>
+                  <li><img src="img/phone.svg" alt=""> Пассажирские перевозки: <b>(4112) 402-409</b></li>
+                  <li><img src="img/phone.svg" alt=""> Грузовые перевозки: <b>(4112) 204-420</b></li>
+                  <li><img src="img/mail.svg" alt=""> <a href="mailto:svtranssakha@mail.ru">svtranssakha@mail.ru</a></li>
+                </ul>
+              </div>
+              <div class="footer_visa">
+                <ul>
+                  <li><img src="img/visa_1.svg" alt=""></li>
+                  <li><img src="img/visa_2.svg" alt=""></li>
+                  <li><img src="img/visa_3.svg" alt=""></li>
+                  <li><img src="img/visa_4.svg" alt=""></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="dist/foundation/js/vendor/jquery.js"></script>
+		<script src="dist/foundation/js/vendor/foundation.min.js"></script>
     <script>
-      new Vue({
-        el: '#slider',
-        vuetify: new Vuetify(),
-        data () {
-          return {
-            items: [
-              {
-                src: 'img/slide1.png',
-              },
-              {
-                src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-              },
-              {
-                src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-              },
-              {
-                src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-              },
-            ],
-          }
-        },
-      });
-      new Vue({
-        el: '#menu',
-        vuetify: new Vuetify(),
-        data: () => ({
-          items: [
-            { title: 'Документы' },
-            { title: 'Справка' },
-          ],
-        }),
-      })
+      $(document).foundation();
     </script>
-    <!-- <script src="dist/main.js"></script> -->
+		<script src="dist/slick/slick.min.js"></script>
+		<script src="dist/main.js"></script>
   </body>
 </html>

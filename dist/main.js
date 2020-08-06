@@ -58,27 +58,55 @@ $('img[src$=".svg"]').each(function() {
 		$img.replaceWith($svg);
 	}, 'xml');
 });
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+if (document.querySelector('.slider')) {
+	var time = 2;
+  var $slick, isPause, tick, percentTime = 0;
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
+  $slick = $('.slider');
+  $slick.slick({
+    draggable: true,
+    adaptiveHeight: false,
+    dots: true,
+    mobileFirst: true,
+    pauseOnDotsHover: true
   });
-});
+  $slick.on({
+    mouseenter: function() {
+      isPause = true;
+    },
+    mouseleave: function() {
+      isPause = false;
+      startProgressbar();
+    },
+    mousedown: function() {
+      $rbar.fadeOut('slow');
+      percentTime = 0;
+    },
+  });
+
+  function startProgressbar() {
+    clearTimeout(tick);
+    isPause = false;
+    tick = setInterval(interval, 20);
+    $rbar.fadeIn('slow');
+  }
+  var $rbar = $('.circle-go');
+  var rlen = 2 * Math.PI * $rbar.attr('r');
+
+  function interval() {
+    if (isPause === false) {
+      percentTime += 1 / (time + 0.1);
+      $rbar.css({
+        strokeDasharray: rlen,
+        strokeDashoffset: rlen * (1 - percentTime / 100)
+      });
+      if (percentTime >= 100) {
+        $slick.slick('slickNext');
+        percentTime = 0;
+        startProgressbar();
+      }
+    }
+  }
+  startProgressbar();
+}
