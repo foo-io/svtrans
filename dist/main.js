@@ -40,6 +40,65 @@ jQuery(document).ready(function(){
 						$('input[name='+fieldName+']').val(1);
 				}
 		});
+		if (document.querySelector('.slider')) {
+			// slick slider
+		    var time = 2;
+		    var $slick, isPause, tick, percentTime = 0;
+
+		    $slick = $('.slider-content');
+		    $slick.slick({
+		      draggable: true,
+		      arrows: false,
+		      adaptiveHeight: false,
+		      dots: true,
+		      //appendDots: '.slider__dots',
+
+		      mobileFirst: true,
+		      pauseOnDotsHover: true,
+		    //speed: 500,
+		    //autoplay: true,
+		    //autoplayspeed: 2000,
+
+		    });
+		    $slick.on({
+		      mouseenter: function() {
+		        isPause = true;
+		      },
+		      mouseleave: function() {
+		        isPause = false;
+		        startProgressbar();
+		      },
+		      mousedown: function() {
+		        $rbar.fadeOut('slow');
+		        percentTime = 0;
+		      },
+		    });
+
+		    function startProgressbar() {
+		      clearTimeout(tick);
+		      isPause = false;
+		      tick = setInterval(interval, 20);
+		      $rbar.fadeIn('slow');
+		    }
+		    var $rbar = $('.circle-go');
+		    var rlen = 2 * Math.PI * $rbar.attr('r');
+
+		    function interval() {
+		      if (isPause === false) {
+		        percentTime += 1 / (time + 0.1);
+		        $rbar.css({
+		          strokeDasharray: rlen,
+		          strokeDashoffset: rlen * (1 - percentTime / 100)
+		        });
+		        if (percentTime >= 100) {
+		          $slick.slick('slickNext');
+		          percentTime = 0;
+		          startProgressbar();
+		        }
+		      }
+		    }
+		    startProgressbar();
+		}
 });
 $('img[src$=".svg"]').each(function() {
 	var $img = jQuery(this);
@@ -58,55 +117,3 @@ $('img[src$=".svg"]').each(function() {
 		$img.replaceWith($svg);
 	}, 'xml');
 });
-
-if (document.querySelector('.slider')) {
-	var time = 2;
-  var $slick, isPause, tick, percentTime = 0;
-
-  $slick = $('.slider');
-  $slick.slick({
-    draggable: true,
-    adaptiveHeight: false,
-    dots: true,
-    mobileFirst: true,
-    pauseOnDotsHover: true
-  });
-  $slick.on({
-    mouseenter: function() {
-      isPause = true;
-    },
-    mouseleave: function() {
-      isPause = false;
-      startProgressbar();
-    },
-    mousedown: function() {
-      $rbar.fadeOut('slow');
-      percentTime = 0;
-    },
-  });
-
-  function startProgressbar() {
-    clearTimeout(tick);
-    isPause = false;
-    tick = setInterval(interval, 20);
-    $rbar.fadeIn('slow');
-  }
-  var $rbar = $('.circle-go');
-  var rlen = 2 * Math.PI * $rbar.attr('r');
-
-  function interval() {
-    if (isPause === false) {
-      percentTime += 1 / (time + 0.1);
-      $rbar.css({
-        strokeDasharray: rlen,
-        strokeDashoffset: rlen * (1 - percentTime / 100)
-      });
-      if (percentTime >= 100) {
-        $slick.slick('slickNext');
-        percentTime = 0;
-        startProgressbar();
-      }
-    }
-  }
-  startProgressbar();
-}

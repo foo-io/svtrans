@@ -52,11 +52,8 @@
                 centerPadding: '50px',
                 cssEase: 'ease',
                 customPaging: function(slider, i) {
-                    return $('<button type="button" />');
+                    return $('<button type="button" />').text(i + 1);
                 },
-                // customPaging: function(slider, i) {
-                //     return $('<button type="button" />').text(i + 1);
-                // },
                 dots: false,
                 dotsClass: 'slick-dots',
                 draggable: true,
@@ -2966,7 +2963,7 @@
                 .find('li')
                     .removeClass('slick-active');
                     // .detach('#load2')
-
+                    
             _.$dots
                 .find('.progress-round__wrap')
                     .removeClass('show')
@@ -2979,7 +2976,7 @@
                 .find('.progress-round__wrap')
                     .eq(Math.floor(_.currentSlide / _.options.slidesToScroll))
                     .addClass('show');
-
+                
 
         }
 
