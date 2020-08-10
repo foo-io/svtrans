@@ -281,9 +281,9 @@ a:hover {
 .slider__text {
 	position: absolute;
 	top: 40%;
-	left: 50%;
+	right: 0;
+	width: 612px;
 }
-
 .slider {
   position: relative;
   display: -webkit-box;
@@ -443,18 +443,29 @@ a:hover {
 	font-size: 24px;
 	line-height: 32px;
 	color: #283348;
+	word-break: break-all;
+}
+.figure_one {
+	position: relative;
+	width: 100%;
+  height: 100%;
+	margin: 0;
+}
+.figure_one::before {
+	content: '';
+	shape-outside: polygon(98% 0, 100% 0, 100% 100%, 57% 100%, 0 100%, 0 50%, 99% 51%);
+  width: 450px;
+  height: 120px;
+	float: right;
 }
 .slider__text-desc {
-	font-size: 18px;
-	line-height: 28px;
-	color: #283348;
-}
-.figure {
-	clip-path: polygon(42% 55%, 43% 0, 100% 0, 100% 100%, 0 98%, 0 55%);
-	shape-outside: margin-box;
-  width: 326px;
-  height: 84px;
-  float: left;
+    font-size: 18px;
+    line-height: 28px;
+    color: #283348;
+    position: absolute;
+    top: 43px;
+    left: 160px;
+    width: 326px;
 }
 /* footer */
 .footer {

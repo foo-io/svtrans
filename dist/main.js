@@ -77,7 +77,7 @@ jQuery(document).ready(function(){
 		    function startProgressbar() {
 		      clearTimeout(tick);
 		      isPause = false;
-		      tick = setInterval(interval, 20);
+		      tick = setInterval(interval, 20000);
 		      $rbar.fadeIn('slow');
 		    }
 		    var $rbar = $('.circle-go');
