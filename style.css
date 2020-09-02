@@ -56,6 +56,7 @@ a:hover {
 .img_title-lower {
 	font-size: 14px;
 	z-index: 90;
+	opacity: 0.8;
 }
 .img_title-upper {
 	font-size: 14px;
@@ -102,7 +103,7 @@ a:hover {
 	position: absolute;
 	left: 0;
 	top: 0;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -349,6 +350,8 @@ a:hover {
 	font-size: 16px;
 }
 .login_top__icon {
+	display: flex;
+    align-items: center;
 	margin-right: 12px;
 }
 .login_top {
@@ -375,8 +378,9 @@ a:hover {
 }
 .header_top__menu ul li a {
 	display: flex;
-	padding-top: 20px;
-	padding-bottom: 22px;
+	padding-top: 22px;
+    padding-bottom: 19px;
+	line-height: 17px;
 }
 .header_top__menu ul li:first-child a {
 	border-bottom: 2px solid #0EA6E7;
@@ -799,7 +803,7 @@ a:hover {
 	font-size: 16px;
 	line-height: 22px;
 	color: #FFFFFF;
-	height: 100px;
+	/* height: 100px; */
 }
 .button {
 	color: #fff;
@@ -836,7 +840,8 @@ a:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	height: 260px;
+	/* height: 260px; */
+	padding: 46px 0;
 }
 .banner_mail {
 	display: flex;
@@ -1236,13 +1241,13 @@ input[type=number] {
 	color: #647C92;
 }
 .footer_info {
-	width: 30%;
+	width: 33.333%;
 }
 .footer_menu {
-	width: 35%;
+	width: 33.333%;
 }
 .footer_contact {
-	width: 35%;
+	width: 33.333%;
 }
 .footer_inner {
 	display: flex;
@@ -1271,7 +1276,7 @@ input[type=number] {
 	flex-direction: row;
 }
 .footer_mailto__text {
-	width: 176px;
+	/* width: 176px; */
 	margin-right: 16px;
 }
 .footer_mailto-info {
