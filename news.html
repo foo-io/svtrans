@@ -1,326 +1,329 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
-  	<meta http-equiv="x-ua-compatible" content="ie=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  	<title>Новости</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Новости</title>
     <link rel="stylesheet" href="./dist/fonts/stylesheet.css">
     <link rel="stylesheet" href="./dist/foundation/css/foundation.css">
-  	<link rel="stylesheet" href="./dist/slick/slick.css" />
+    <link rel="stylesheet" href="./dist/slick/slick.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles.min.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="body" id="app">
-      <div class="header">
-        <div class="header_top">
-          <div class="container">
-            <div class="header_top__inner">
-              <div class="header_top_left">
-                <div class="header_top__logo">
-                  <a href="#">
-                    <img src="./img/logo.svg" alt="СВ Транс">
-                  </a>
-                </div>
-                <div class="header_top__menu">
-                  <ul>
-                    <li><a href="#" class="text-medium blue">ЧАСТНЫМ ЛИЦАМ</a></li>
-                    <li><a href="#" class="text-medium grey">БИЗНЕСУ</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="header_top_right">
-                <div class="header_top__login">
-                  <a href="#" class="login_top svg-hover">
-                    <div class="login_top__icon">
-                      <img src="./img/login.svg" alt="">
-                    </div>
-                    <span class="login_top__text text-medium blue">
-                      Войти в ЛК
-                    </span>
-                  </a>
-                </div>
-                <div class="header_top__search">
-                  <a href="#" class="top_search svg-hover">
-                    <img src="./img/search.svg" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="header_bottom">
-          <div class="container">
-            <div class="header_bottom__inner">
-              <div class="header_bottom__menu">
-                <ul class="dropdown menu" data-dropdown-menu>
-                  <li><a href="#">Купить билет</a></li>
-                  <li><a href="#">Грузовые перевозки</a></li>
-                  <li>
-                    <a href="#">Документы и справка</a>
-                    <ul class="menu">
-                      <li><a href="#">Документы</a></li>
-                      <li><a href="#">справка</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">О компании</a></li>
-                  <li>
-                    <a href="#">Контакты</a>
-                    <ul class="menu">
-                      <li><a href="#">Документы</a></li>
-                      <li><a href="#">справка</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Новости</a></li>
-                  <li><a href="#">Спецпредложения</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-
-        <!-- хедер страниц -->
-        <div class="page__header" style="background: linear-gradient(90deg, #0EA6E7 35.9%, #39C1FC 66.08%);">
-            <div class="container">
-                <nav role="navigation">
-                    <ul class="breadcrumbs">
-                        <li><a href="#">Главная</a></li>
-                        <li class="disabled">Новости</li>
-                    </ul>
-                </nav>
-
-                <div class="page__header-title">
-                    <h1>Новости</h1>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="page__section">
-            <div class="container">
-                <div class="row">
-                    <div class="lg-12 block">
-                      <a href="#" class="news__main news_content background-item">
-                        <div class="news-meta">
-                          <div class="news-meta__item">
-                            <img src="./img/photo.svg" alt="">
-                            <span>34</span>
-                          </div>
+        <div class="header">
+            <div class="header_top">
+                <div class="container">
+                    <div class="header_top__inner">
+                        <div class="header_top_left">
+                            <div class="header_top__logo">
+                                <a href="#">
+                                    <img src="./img/logo.svg" alt="СВ Транс">
+                                </a>
+                            </div>
+                            <div class="header_top__menu">
+                                <ul>
+                                    <li><a href="#" class="text-medium blue">ЧАСТНЫМ ЛИЦАМ</a></li>
+                                    <li><a href="#" class="text-medium grey">БИЗНЕСУ</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="background-image" style="background-image:url(img/news_1.png)"></div>
-                        <div class="news_content__inner">
-                          <span class="margin-bottom img_title-upper">советы путешественникам</span>
-                          <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
-                          <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
-                          <span class="margin-bottom img_title-lower">10.06.2020</span>
+                        <div class="header_top_right">
+                            <div class="header_top__login">
+                                <a href="#" class="login_top svg-hover">
+                                    <div class="login_top__icon">
+                                        <img src="./img/login.svg" alt="">
+                                    </div>
+                                    <span class="login_top__text text-medium blue">
+                                        Войти в ЛК
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="header_top__search">
+                                <a href="#" class="top_search svg-hover">
+                                    <img src="./img/search.svg" alt="">
+                                </a>
+                            </div>
                         </div>
-                      </a>
                     </div>
                 </div>
-
-                <ul class="tags">
-                    <li class="tags__link tags__link-selected"><a href="#">Все новости</a></li>
-                    <li class="tags__link"><a href="#">Ликбез</a></li>
-                    <li class="tags__link"><a href="#">Фотография</a></li>
-                    <li class="tags__link"><a href="#">Советы</a></li>
-                </ul>
-          </div>
-        </div>
-
-        <div class="deline"></div>
-
-        <div class="page__section __not-margin">
-            <div class="container">
-                <div class="row">
-                  <div class="lg-3 block">
-                    <a href="#" class="news_content-2 background-item">
-                      <div class="news-meta">
-                          <div class="news-meta__item">
-                            <img src="./img/photo.svg" alt="">
-                            <span>49</span>
-                          </div>
-                          <div class="news-meta__item">
-                            <img src="./img/video.svg" alt="">
-                            <span>3</span>
-                          </div>
-                      </div>
-                      <div class="background-image" style="background-image:url(img/news_1.png)"></div>
-                      <div class="news_content__inner-2">
-                        <span class="margin-bottom img_title-upper">Фотография</span>
-                        <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
-                        <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
-                        <span class="margin-bottom img_title-lower">10.06.2020</span>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="lg-3 block">
-                    <a href="#" class="news_content-2 background-item">
-                      <div class="news-meta">
-                        <div class="news-meta__item">
-                          <img src="./img/photo.svg" alt="">
-                          <span>34</span>
+            </div>
+            <div class="header_bottom">
+                <div class="container">
+                    <div class="header_bottom__inner">
+                        <div class="header_bottom__menu">
+                            <ul class="dropdown menu" data-dropdown-menu>
+                                <li><a href="#">Купить билет</a></li>
+                                <li><a href="#">Грузовые перевозки</a></li>
+                                <li>
+                                    <a href="#">Документы и справка</a>
+                                    <ul class="menu">
+                                        <li><a href="#">Документы</a></li>
+                                        <li><a href="#">справка</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">О компании</a></li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                    <ul class="menu">
+                                        <li><a href="#">Документы</a></li>
+                                        <li><a href="#">справка</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Спецпредложения</a></li>
+                            </ul>
                         </div>
-                      </div>
-                      <div class="background-image" style="background-image:url(img/news_2.png)"></div>
-                      <div class="news_content__inner-2">
-                        <span class="margin-bottom img_title-upper">Фотография</span>
-                        <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
-                        <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
-                        <span class="margin-bottom img_title-lower">10.06.2020</span>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="lg-3 block">
-                    <a href="#" class="news_content-2 background-item">
-                      <div class="news-meta">
-                        <div class="news-meta__item">
-                          <img src="./img/photo.svg" alt="">
-                          <span>34</span>
-                        </div>
-                      </div>
-                      <div class="background-image" style="background-image:url(img/news_3.png)"></div>
-                      <div class="news_content__inner-2">
-                        <span class="margin-bottom img_title-upper">Фотография</span>
-                        <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
-                        <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
-                        <span class="margin-bottom img_title-lower">10.06.2020</span>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="lg-3 block">
-                    <a href="#" class="news_content-2 background-item">
-                      <div class="news-meta">
-                        <div class="news-meta__item">
-                          <img src="./img/photo.svg" alt="">
-                          <span>34</span>
-                        </div>
-                      </div>
-                      <div class="background-image" style="background-image:url(img/news_4.png)"></div>
-                      <div class="news_content__inner-2">
-                        <span class="margin-bottom img_title-upper">Фотография</span>
-                        <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
-                        <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
-                        <span class="margin-bottom img_title-lower">10.06.2020</span>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="lg-3 block">
-                    <a href="#" class="news_content-2 background-item">
-                      <div class="news-meta">
-                        <div class="news-meta__item">
-                          <img src="./img/photo.svg" alt="">
-                          <span>34</span>
-                        </div>
-                      </div>
-                      <div class="background-image" style="background-image:url(img/news_5.png)"></div>
-                      <div class="news_content__inner-2">
-                        <span class="margin-bottom img_title-upper">Фотография</span>
-                        <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
-                        <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
-                        <span class="margin-bottom img_title-lower">10.06.2020</span>
-                      </div>
-                    </a>
-                  </div>
+                    </div>
                 </div>
-                <div class="page__navigation">
-                    <nav aria-label="Pagination">
-                        <ul class="pagination">
-                            <li class="pagination-first disabled"><img src="./img/navi_2left.svg" alt=""></li>
-                            <li class="pagination-prev disabled"><img src="./img/navi_1left.svg" alt=""></li>
-                            <li class="current">1</li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">10</a></li>
-                            <li class="pagination-next"><a href="#"><img src="./img/navi_1right.svg" alt=""></a></li>
-                            <li class="pagination-last"><a href="#"><img src="./img/navi_2right.svg" alt=""></a></li>
+            </div>
+        </div>
+        <div class="main">
+
+            <!-- хедер страниц -->
+            <div class="page__header" style="background: linear-gradient(90deg, #0EA6E7 35.9%, #39C1FC 66.08%);">
+                <div class="container">
+                    <nav role="navigation">
+                        <ul class="breadcrumbs">
+                            <li><a href="#">Главная</a></li>
+                            <li class="disabled">Новости</li>
                         </ul>
                     </nav>
-                </div>
-            </div>
-        </div>
 
-      </div>
-      <div class="footer">
-        <div class="container">
-          <div class="footer_inner">
-            <div class="footer_info footer__block">
-              <div class="footer_logo">
-                <img src="./img/footer_logo.svg" alt="">
-              </div>
-              <span class="footer_info__text">Есть вопросы?</span>
-              <div class="footer_mailto">
-                <div class="footer_mailto__text">
-                  <input class="input__text input__text-black" type="text" name="" value="" placeholder="Ваш телефон">
+                    <div class="page__header-title">
+                        <h1>Новости</h1>
+                    </div>
                 </div>
-                <div class="footer_mailto__button">
-                  <input class="input__submit btn" type="submit" name="" value="Отправить">
+            </div>
+
+
+            <div class="page__section">
+                <div class="container">
+                    <div class="row">
+                        <div class="lg-12 block">
+                            <a href="#" class="news__main news_content background-item">
+                                <div class="news-meta">
+                                    <div class="news-meta__item">
+                                        <img src="./img/photo.svg" alt="">
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                                <div class="background-image" style="background-image:url(img/news_1.png)"></div>
+                                <div class="news_content__inner">
+                                    <span class="margin-bottom img_title-upper">советы путешественникам</span>
+                                    <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
+                                    <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
+                                    <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <ul class="tags">
+                        <li class="tags__link tags__link-selected"><a href="#">Все новости</a></li>
+                        <li class="tags__link"><a href="#">Ликбез</a></li>
+                        <li class="tags__link"><a href="#">Фотография</a></li>
+                        <li class="tags__link"><a href="#">Советы</a></li>
+                    </ul>
                 </div>
-              </div>
-              <div class="footer_mailto-info">
-                <span>Нажимая на кнопку вы соглашаетесь с <a href="#" class="blue">политикой конфиденциальности</a></span>
-              </div>
             </div>
-            <div class="footer_menu footer__block">
-              <ul class="dropdown menu" data-dropdown-menu>
-                <li><a href="">Купить билет</a></li>
-                <li><a href="">Грузовые перевозки</a></li>
-                <li>
-                  <a href="#">Документы и справка</a>
-                  <ul class="menu">
-                    <li><a href="#">Документы</a></li>
-                    <li><a href="#">справка</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">О компании</a>
-                  <ul class="menu">
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Контакты</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Контакты</a>
-                  <ul class="menu">
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Контакты</a></li>
-                  </ul>
-                </li>
-                <li><a href="">Новости</a></li>
-                <li><a href="">Спецпредложения</a></li>
-              </ul>
+
+            <div class="deline"></div>
+
+            <div class="page__section __not-margin">
+                <div class="container">
+                    <div class="row">
+                        <div class="lg-3 block">
+                            <a href="#" class="news_content-2 background-item">
+                                <div class="news-meta">
+                                    <div class="news-meta__item">
+                                        <img src="./img/photo.svg" alt="">
+                                        <span>49</span>
+                                    </div>
+                                    <div class="news-meta__item">
+                                        <img src="./img/video.svg" alt="">
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                                <div class="background-image" style="background-image:url(img/news_1.png)"></div>
+                                <div class="news_content__inner-2">
+                                    <span class="margin-bottom img_title-upper">Фотография</span>
+                                    <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
+                                    <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
+                                    <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg-3 block">
+                            <a href="#" class="news_content-2 background-item">
+                                <div class="news-meta">
+                                    <div class="news-meta__item">
+                                        <img src="./img/photo.svg" alt="">
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                                <div class="background-image" style="background-image:url(img/news_2.png)"></div>
+                                <div class="news_content__inner-2">
+                                    <span class="margin-bottom img_title-upper">Фотография</span>
+                                    <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
+                                    <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
+                                    <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg-3 block">
+                            <a href="#" class="news_content-2 background-item">
+                                <div class="news-meta">
+                                    <div class="news-meta__item">
+                                        <img src="./img/photo.svg" alt="">
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                                <div class="background-image" style="background-image:url(img/news_3.png)"></div>
+                                <div class="news_content__inner-2">
+                                    <span class="margin-bottom img_title-upper">Фотография</span>
+                                    <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
+                                    <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
+                                    <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg-3 block">
+                            <a href="#" class="news_content-2 background-item">
+                                <div class="news-meta">
+                                    <div class="news-meta__item">
+                                        <img src="./img/photo.svg" alt="">
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                                <div class="background-image" style="background-image:url(img/news_4.png)"></div>
+                                <div class="news_content__inner-2">
+                                    <span class="margin-bottom img_title-upper">Фотография</span>
+                                    <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
+                                    <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
+                                    <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg-3 block">
+                            <a href="#" class="news_content-2 background-item">
+                                <div class="news-meta">
+                                    <div class="news-meta__item">
+                                        <img src="./img/photo.svg" alt="">
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                                <div class="background-image" style="background-image:url(img/news_5.png)"></div>
+                                <div class="news_content__inner-2">
+                                    <span class="margin-bottom img_title-upper">Фотография</span>
+                                    <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
+                                    <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
+                                    <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="page__navigation">
+                        <nav aria-label="Pagination">
+                            <ul class="pagination">
+                                <li class="pagination-first disabled"><img src="./img/navi_2left.svg" alt=""></li>
+                                <li class="pagination-prev disabled"><img src="./img/navi_1left.svg" alt=""></li>
+                                <li class="current">1</li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">10</a></li>
+                                <li class="pagination-next"><a href="#"><img src="./img/navi_1right.svg" alt=""></a></li>
+                                <li class="pagination-last"><a href="#"><img src="./img/navi_2right.svg" alt=""></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
-            <div class="footer_contact footer__block">
-              <div class="footer_contact__content">
-                <ul>
-                  <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Пассажирские перевозки: <b>(4112) 402-409</b></li>
-                  <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Грузовые перевозки: <b>(4112) 204-420</b></li>
-                  <li><img src="./img/mail.svg" alt="" class="icon__margin-right"> <a href="mailto:svtranssakha@mail.ru">svtranssakha@mail.ru</a></li>
-                </ul>
-              </div>
-              <div class="footer_visa">
-                <ul>
-                  <li><img src="./img/visa_1.svg" alt=""></li>
-                  <li><img src="./img/visa_2.svg" alt=""></li>
-                  <li><img src="./img/visa_3.svg" alt=""></li>
-                  <li><img src="./img/visa_4.svg" alt=""></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+
         </div>
-      </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer_inner">
+                    <div class="footer_info footer__block">
+                        <div class="footer_logo">
+                            <img src="./img/footer_logo.svg" alt="">
+                        </div>
+                        <span class="footer_info__text">Есть вопросы?</span>
+                        <div class="footer_mailto">
+                            <div class="footer_mailto__text">
+                                <input class="input__text input__text-black" type="text" name="" value="" placeholder="Ваш телефон">
+                            </div>
+                            <div class="footer_mailto__button">
+                                <input class="input__submit btn" type="submit" name="" value="Отправить">
+                            </div>
+                        </div>
+                        <div class="footer_mailto-info">
+                            <span>Нажимая на кнопку вы соглашаетесь с <a href="#" class="blue">политикой конфиденциальности</a></span>
+                        </div>
+                    </div>
+                    <div class="footer_menu footer__block">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li><a href="">Купить билет</a></li>
+                            <li><a href="">Грузовые перевозки</a></li>
+                            <li>
+                                <a href="#">Документы и справка</a>
+                                <ul class="menu">
+                                    <li><a href="#">Документы</a></li>
+                                    <li><a href="#">справка</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">О компании</a>
+                                <ul class="menu">
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                                <ul class="menu">
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Спецпредложения</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_contact footer__block">
+                        <div class="footer_contact__content">
+                            <ul>
+                                <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Пассажирские перевозки: <b>(4112) 402-409</b></li>
+                                <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Грузовые перевозки: <b>(4112) 204-420</b></li>
+                                <li><img src="./img/mail.svg" alt="" class="icon__margin-right"> <a href="mailto:svtranssakha@mail.ru">svtranssakha@mail.ru</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_visa">
+                            <ul>
+                                <li><img src="./img/visa_1.svg" alt=""></li>
+                                <li><img src="./img/visa_2.svg" alt=""></li>
+                                <li><img src="./img/visa_3.svg" alt=""></li>
+                                <li><img src="./img/visa_4.svg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="dist/foundation/js/vendor/jquery.js"></script>
-	<script src="dist/foundation/js/vendor/foundation.min.js"></script>
+    <script src="dist/foundation/js/vendor/foundation.min.js"></script>
     <script>
         $(document).foundation();
     </script>
-	<script src="dist/slick/slick.js"></script>
+    <script src="dist/slick/slick.js"></script>
     <script src="dist/progressBar.js"></script>
-	<script src="dist/main.js"></script>
-  </body>
+    <script src="dist/main.js"></script>
+</body>
+
 </html>

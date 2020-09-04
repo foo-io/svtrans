@@ -1306,10 +1306,10 @@ input[type=number] {
 }
 .header_bottom__menu .dropdown .is-dropdown-submenu > li > a {
 	position: relative;
+	transition: 0.15s all ease;
 }
 .header_bottom__menu .dropdown .is-dropdown-submenu > li > a:hover {
 	padding-left: 15px;
-	transition: 0.15s all ease;
 }
 .header_bottom__menu .dropdown .is-dropdown-submenu > li > a:hover::after {
 	content: '';
