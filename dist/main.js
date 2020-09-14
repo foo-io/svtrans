@@ -29,7 +29,7 @@ jQuery(document).ready(function(){
 
 
 				if (currentVal == 1) {
-			$(".minus").addClass("disabled");
+					$(".minus").addClass("disabled");
 				}
 				// If it isn't undefined or its greater than 0
 				if (!isNaN(currentVal) && currentVal > 1) {
@@ -37,13 +37,17 @@ jQuery(document).ready(function(){
 						$('input[name='+fieldName+']').val(currentVal - 1);
 				} else {
 						// Otherwise put a 0 there
-						$('input[name='+fieldName+']').val(1);
+						if (fieldName == 'quantity1') {
+							$('input[name='+fieldName+']').val(1);
+						} else {
+							$('input[name='+fieldName+']').val(0);
+						}
 				}
 		});
 		if (document.querySelector('.slider')) {
 			// slick slider
-		    var time = 2;
-		    var $slick, isPause, tick, percentTime = 0;
+		    let time = 2;
+		    let $slick, isPause, tick, percentTime = 0;
 
 		    $slick = $('.slider-content');
 		    $slick.slick({
@@ -80,8 +84,8 @@ jQuery(document).ready(function(){
 		      tick = setInterval(interval, 20);
 		      $rbar.fadeIn('slow');
 		    }
-		    var $rbar = $('.circle-go');
-		    var rlen = 2 * Math.PI * $rbar.attr('r');
+		    let $rbar = $('.circle-go');
+		    let rlen = 2 * Math.PI * $rbar.attr('r');
 
 		    function interval() {
 		      if (isPause === false) {
