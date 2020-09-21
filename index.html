@@ -2,1147 +2,1268 @@
 <html lang="ru" dir="ltr">
 
 <head>
-   <meta charset="utf-8">
-   <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-   <title>СВТранс</title>
-   <link rel="stylesheet" href="dist/fonts/stylesheet.css">
-   <link rel="stylesheet" href="dist/foundation/css/foundation.css">
-   <link rel="stylesheet" href="dist/slick/slick.css" />
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="styles.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>СВТранс</title>
+    <link rel="stylesheet" href="dist/fonts/stylesheet.css">
+    <link rel="stylesheet" href="dist/foundation/css/foundation.css">
+    <link rel="stylesheet" href="dist/slick/slick.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.min.css">
 </head>
 
 <body>
-   <div class="body" id="app">
-      <div class="header">
-         <div class="header_top">
-            <div class="container">
-               <div class="header_top__inner">
-                  <div class="header_top_left">
-                     <div class="header_top__logo">
-                        <a href="#">
-                           <img src="./img/logo.svg" alt="СВ Транс">
-                        </a>
-                     </div>
-                     <div class="header_top__menu">
-                        <ul>
-                           <li><a href="#" class="text-medium blue">ЧАСТНЫМ ЛИЦАМ</a></li>
-                           <li><a href="#" class="text-medium grey">БИЗНЕСУ</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="header_top_right">
-                     <div class="header_top__login">
-                        <a href="#" class="login_top svg-hover">
-                           <div class="login_top__icon">
-                              <img src="./img/login.svg" alt="">
-                           </div>
-                           <span class="login_top__text text-medium blue">
-                              Войти в ЛК
-                           </span>
-                        </a>
-                     </div>
-                     <div class="header_top__search">
-                        <a href="#" class="top_search svg-hover">
-                           <img src="./img/search.svg" alt="">
-                        </a>
-                     </div>
-                  </div>
-               </div>
+    <div class="body" id="app">
+        <div class="header">
+            <div class="header_top">
+                <div class="container">
+                    <div class="header_top__inner">
+                        <div class="header_top_left">
+                            <div class="header_top__logo">
+                                <a href="#">
+                                    <img src="./img/logo.svg" alt="СВ Транс">
+                                </a>
+                            </div>
+                            <div class="header_top__menu">
+                                <ul>
+                                    <li><a href="#" class="text-medium blue">ЧАСТНЫМ ЛИЦАМ</a></li>
+                                    <li><a href="#" class="text-medium grey">БИЗНЕСУ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header_top_right">
+                            <div class="header_top__login">
+                                <a href="#" class="login_top svg-hover">
+                                    <div class="login_top__icon">
+                                        <img src="./img/login.svg" alt="">
+                                    </div>
+                                    <span class="login_top__text text-medium blue">
+                                        Войти в ЛК
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="header__top-search">
+                                <a href="#" class="top_search svg-hover">
+                                    <img src="./img/search.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="header__top-burger">
+                                <button type="button" data-toggle="mobile-menu">
+                                    <img src="./img/burger.svg" alt="" class="mobile-menu__burger-open">
+                                    <img src="./img/menu-close.svg" alt="" class="mobile-menu__burger-close">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="header_bottom">
+            <div class="header_bottom">
+                <div class="container">
+                    <div class="header_bottom__inner">
+                        <div class="header_bottom__menu">
+                            <ul class="dropdown menu" data-dropdown-menu>
+                                <li><a href="#">Купить билет</a></li>
+                                <li><a href="#">Грузовые перевозки</a></li>
+                                <li>
+                                    <a href="#">Документы и справка</a>
+                                    <ul class="menu">
+                                        <li><a href="#">Документы</a></li>
+                                        <li><a href="#">Справка</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">О компании</a></li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                    <ul class="menu">
+                                        <li><a href="#">Офис</a></li>
+                                        <li><a href="#">Склад</a></li>
+                                        <li><a href="#">Авиакассы</a></li>
+                                    </ul>
+                                </li>
+                                <li class="md-hidden"><a href="#">Новости</a></li>
+                                <li class="md-hidden"><a href="#">Спецпредложения</a></li>
+                                <li class="lg-hidden md-visible">
+                                    <a href="#">Ещё</a>
+                                    <ul class="menu">
+                                        <li><a href="#">Новости</a></li>
+                                        <li><a href="#">Спецпредложения</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-pane mobile-menu" id="mobile-menu" data-dropdown data-auto-focus="true">
+                <ul class="vertical menu accordion-menu mobile-menu__accordion" data-accordion-menu>
+                    <li><a href="#">Купить билет</a></li>
+                    <li><a href="#">Грузовые перевозки</a></li>
+                    <li>
+                        <a href="#">Документы и справка</a>
+                        <ul class="menu vertical mobile-menu__submenu">
+                            <li><a href="#">Автоперевозки</a></li>
+                            <li><a href="#">Авиаперевозки</a></li>
+                            <li><a href="#">Речные перевозки</a></li>
+                            <li><a href="#">Для покупателей авиабилетов</a></li>
+                            <li><a href="#">Для бизнеса</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Спецпредложения</a></li>
+                </ul>
+                <div class="mobile-menu__contact">
+                    <div class="mobile-menu__contact-item">
+                        <div class="mobile-menu__contact-icon">
+                            <img src="./img/phone.svg" alt="">
+                        </div>
+                        <div class="mobile-menu__contact-text">
+                            Пассажирские перевозки:<br>
+                            <span>(4112) 402-409</span>
+                        </div>
+                    </div>
+                    <div class="mobile-menu__contact-item">
+                        <div class="mobile-menu__contact-icon">
+                            <img src="./img/phone.svg" alt="">
+                        </div>
+                        <div class="mobile-menu__contact-text">
+                            Грузовые перевозки:<br>
+                            <span>(4112) 204-420</span>
+                        </div>
+                    </div>
+                    <div class="mobile-menu__contact-item">
+                        <div class="mobile-menu__contact-icon">
+                            <img src="./img/mail.svg" alt="">
+                        </div>
+                        <div class="mobile-menu__contact-text">
+                            <a href="#">svtranssakha@mail.ru</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+
+            <div class="slider">
+                <div class="container">
+
+                    <div class="slider-wrapper">
+                        <div class="slider-content">
+                            <div class="slide">
+                                <div class="slider__img" style="background-image:url(img/slide1.png)">
+
+                                </div>
+                                <div class="slider__text">
+                                    <div class="slider__text-content">
+                                        <div class="polygon">
+                                            <div class="polygon__title">Полный комплекс по организации мультимодальных перевозок —
+                                                <span>
+                                                    авиаперевозки грузов по России, международные авиаперевозки, складская обработка и хранение груза.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="slider__img" style="background-image:url(https://via.placeholder.com/1200x900/)">
+
+                                </div>
+                                <div class="slider__text">
+                                    <div class="polygon">
+                                        <div class="polygon__title">Lorem ipsum dolor sit —
+                                            <span>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum porro officiis, nam.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="slider__img" style="background-image:url(https://via.placeholder.com/200x400/)">
+
+                                </div>
+                                <div class="slider__text">
+                                    <div class="polygon">
+                                        <div class="polygon__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti molestiae at nesciunt, id laborum. —
+                                            <span>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed architecto illo omnis sapiente debitis a inventore quo consequatur autem, harum?
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="calc">
+                <div class="container">
+                    <div class="calc_form">
+
+                        <ul class="tabs calc_top" data-tabs id="calc-main__tabs">
+                            <li class="tabs-title is-active"><a href="#aerotickets" aria-selected="true">Авиабилеты</a></li>
+                            <li class="tabs-title"><a data-tabs-target="traintickets" href="#traintickets">Ж/Д билеты</a></li>
+                            <li class="tabs-title"><a data-tabs-target="aerocargo" href="#aerocargo">Авиагруз</a></li>
+                            <li class="tabs-title"><a data-tabs-target="autocargo" href="#autocargo">Автогуз</a></li>
+                        </ul>
+                        <div class="tabs-content calc_content" data-tabs-content="calc-main__tabs">
+                            <div class="tabs-panel is-active" id="aerotickets">
+                                <ul class="tabs calc_bottom" data-tabs id="aerotickets__sub">
+                                    <li class="tabs-title is-active"><a href="#panel10" aria-selected="true">В одну сторону</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="panel11" href="#panel11">Туда и обратно</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="panel12" href="#panel12">Сложный маршрут</a></li>
+                                </ul>
+                                <div class="tabs-content" data-tabs-content="aerotickets__sub">
+                                    <div class="tabs-panel is-active" id="panel10">
+                                        <form class="calc_form-main" action="index.html" method="post">
+                                            <div class="calc-content">
+                                                <div class="calc-content__settings">
+                                                    <div class="calc-content__settings-item __calc-from">
+                                                        <label class="calc-content__settings-title" for="aeroticketsFrom">Откуда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon" for="aeroticketsFrom">
+                                                                <img src="./img/calc1.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroticketsFrom" placeholder="Якутск">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item __calc-date">
+                                                        <label class="calc-content__settings-title" for="aeroticketsFromDate">Когда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon __icon-left" for="aeroticketsFromDate">
+                                                                <img src="./img/calendar.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon-left" name="" value="" id="aeroticketsFromDate" placeholder="18.09.2020">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item __calc-arrow">
+                                                        <img src="./img/Arrow-calc.svg" alt="">
+                                                    </div>
+                                                    <div class="calc-content__settings-item __calc-where">
+                                                        <!-- if not last element add style 'flex-grow: 1' -->
+                                                        <label class="calc-content__settings-title" for="aeroticketsWhere">Куда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon" for="aeroticketsWhere">
+                                                                <img src="./img/calc2.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroticketsWhere" placeholder="Москва">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-content__selectors">
+                                                    <div class="calc-content__checkboxes">
+                                                        <div class="calc-content__checkboxes-item">
+                                                            <input class="calc-content__input-checkbox" id="checkboxTransfer" type="checkbox" name="checkbox" value="">
+                                                            <label for="checkboxTransfer">
+                                                                <span class="calc-content__checkboxes-label">Без пересадок</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="calc-content__checkboxes-item">
+                                                            <input class="calc-content__input-checkbox" id="checkboxMoreDay" type="checkbox" name="checkbox" value="">
+                                                            <label for="checkboxMoreDay">
+                                                                <span class="calc-content__checkboxes-label">± 3 дня</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__selectors-deline"></div>
+                                                    <div class="calc-content__radios">
+                                                        <div class="calc-content__radios-item">
+                                                            <input class="calc-content__input-radios" id="radioAll" type="radio" name="radio" value="">
+                                                            <label for="radioAll">
+                                                                <span class="calc-content__radios-label">Все рейсы</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="calc-content__radios-item">
+                                                            <input class="calc-content__input-radios" id="radioRegular" type="radio" name="radio" value="">
+                                                            <label for="radioRegular">
+                                                                <span class="calc-content__radios-label">Регулярные</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="calc-content__radios-item">
+                                                            <input class="calc-content__input-radios" id="radioCharter" type="radio" name="radio" value="">
+                                                            <label for="radioCharter">
+                                                                <span class="calc-content__radios-label">Чартеры</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-content__deline"></div>
+                                                <div class="calc-content__bottom">
+                                                    <div class="calc-content__counter">
+                                                        <div class="calc-content__counter-item">
+                                                            <span class="calc-content__counter-text">Взрослые</span>
+                                                            <span class="calc-content__counter-text __grey">(от 12)</span>
+                                                            <div class="input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity1">
+                                                                        <div class="minus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="input-group-field" type="number" name="quantity1" min="1" value="1">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="plus" data-quantity="plus" data-field="quantity1">
+                                                                        <div class="plus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calc-content__counter-item">
+                                                            <span class="calc-content__counter-text">Дети</span>
+                                                            <span class="calc-content__counter-text __grey">(2-12)</span>
+                                                            <div class="input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity2">
+                                                                        <div class="minus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="input-group-field" type="number" name="quantity2" min="0" value="0">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="plus" data-quantity="plus" data-field="quantity2">
+                                                                        <div class="plus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calc-content__counter-item">
+                                                            <span class="calc-content__counter-text">Младенцы</span>
+                                                            <span class="calc-content__counter-text __grey">(0-2) без места</span>
+                                                            <div class="input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity3">
+                                                                        <div class="minus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="input-group-field" type="number" name="quantity3" min="0" value="0">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="plus" data-quantity="plus" data-field="quantity3">
+                                                                        <div class="plus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calc-content__counter-item">
+                                                            <span class="calc-content__counter-text">Молодёжь</span>
+                                                            <span class="calc-content__counter-text __grey">(12-23)</span>
+                                                            <div class="input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity4">
+                                                                        <div class="minus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="input-group-field" type="number" name="quantity4" min="0" value="0">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="plus" data-quantity="plus" data-field="quantity4">
+                                                                        <div class="plus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__button">
+                                                        <button>Найти <img src="./img/loop.svg" alt=""></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tabs-panel" id="panel11">
+                                        <form class="calc_form-main" action="index.html" method="post">
+                                            <div class="calc-content">
+                                                <div class="calc-content__settings">
+                                                    <div class="calc-content__settings-item __calc-from">
+                                                        <label class="calc-content__settings-title" for="aeroticketsFrom">Откуда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon" for="aeroticketsFrom">
+                                                                <img src="./img/calc1.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroticketsFrom" placeholder="Якутск">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item __calc-date">
+                                                        <label class="calc-content__settings-title" for="aeroticketsFromDate">Когда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon __icon-left" for="aeroticketsFromDate">
+                                                                <img src="./img/calendar.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon-left" name="" value="" id="aeroticketsFromDate" placeholder="18.09.2020">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item __calc-arrow">
+                                                        <img src="./img/Arrow-calc.svg" alt="">
+                                                    </div>
+                                                    <div class="calc-content__settings-item __calc-where" style="flex-grow: 1">
+                                                        <!-- if not last element add style 'flex-grow: 1' -->
+                                                        <label class="calc-content__settings-title" for="aeroticketsWhere">Куда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon" for="aeroticketsWhere">
+                                                                <img src="./img/calc2.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroticketsWhere" placeholder="Москва">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item __calc-date">
+                                                        <label class="calc-content__settings-title" for="aeroticketsFromDate">Когда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon __icon-left" for="aeroticketsFromDate">
+                                                                <img src="./img/calendar.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon-left" name="" value="" id="aeroticketsFromDate" placeholder="18.09.2020">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-content__selectors">
+                                                    <div class="calc-content__checkboxes">
+                                                        <div class="calc-content__checkboxes-item">
+                                                            <input class="calc-content__input-checkbox" id="checkboxTransfer" type="checkbox" name="checkbox" value="">
+                                                            <label for="checkboxTransfer">
+                                                                <span class="calc-content__checkboxes-label">Без пересадок</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="calc-content__checkboxes-item">
+                                                            <input class="calc-content__input-checkbox" id="checkboxMoreDay" type="checkbox" name="checkbox" value="">
+                                                            <label for="checkboxMoreDay">
+                                                                <span class="calc-content__checkboxes-label">± 3 дня</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__selectors-deline"></div>
+                                                    <div class="calc-content__radios">
+                                                        <div class="calc-content__radios-item">
+                                                            <input class="calc-content__input-radios" id="radioAll" type="radio" name="radio" value="">
+                                                            <label for="radioAll">
+                                                                <span class="calc-content__radios-label">Все рейсы</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="calc-content__radios-item">
+                                                            <input class="calc-content__input-radios" id="radioRegular" type="radio" name="radio" value="">
+                                                            <label for="radioRegular">
+                                                                <span class="calc-content__radios-label">Регулярные</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="calc-content__radios-item">
+                                                            <input class="calc-content__input-radios" id="radioCharter" type="radio" name="radio" value="">
+                                                            <label for="radioCharter">
+                                                                <span class="calc-content__radios-label">Чартеры</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-content__deline"></div>
+                                                <div class="calc-content__bottom">
+                                                    <div class="calc-content__counter">
+                                                        <div class="calc-content__counter-item">
+                                                            <span class="calc-content__counter-text">Взрослые</span>
+                                                            <span class="calc-content__counter-text __grey">(от 12)</span>
+                                                            <div class="input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity1">
+                                                                        <div class="minus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="input-group-field" type="number" name="quantity1" min="1" value="1">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="plus" data-quantity="plus" data-field="quantity1">
+                                                                        <div class="plus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calc-content__counter-item">
+                                                            <span class="calc-content__counter-text">Дети</span>
+                                                            <span class="calc-content__counter-text __grey">(2-12)</span>
+                                                            <div class="input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity2">
+                                                                        <div class="minus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="input-group-field" type="number" name="quantity2" min="0" value="0">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="plus" data-quantity="plus" data-field="quantity2">
+                                                                        <div class="plus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calc-content__counter-item">
+                                                            <span class="calc-content__counter-text">Младенцы</span>
+                                                            <span class="calc-content__counter-text __grey">(0-2) без места</span>
+                                                            <div class="input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity3">
+                                                                        <div class="minus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="input-group-field" type="number" name="quantity3" min="0" value="0">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="plus" data-quantity="plus" data-field="quantity3">
+                                                                        <div class="plus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calc-content__counter-item">
+                                                            <span class="calc-content__counter-text">Молодёжь</span>
+                                                            <span class="calc-content__counter-text __grey">(12-23)</span>
+                                                            <div class="input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity4">
+                                                                        <div class="minus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="input-group-field" type="number" name="quantity4" min="0" value="0">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="plus" data-quantity="plus" data-field="quantity4">
+                                                                        <div class="plus_ico"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__button">
+                                                        <button>Найти <img src="./img/loop.svg" alt=""></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tabs-panel" id="panel12">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-panel" id="traintickets">
+                                <ul class="tabs calc_bottom" data-tabs id="traintickets__sub">
+                                    <li class="tabs-title is-active"><a href="#panel20" aria-selected="true">В одну сторону</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="panel21" href="#panel21">Туда и обратно</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="panel22" href="#panel22">Сложный маршрут</a></li>
+                                </ul>
+                                <div class="tabs-content" data-tabs-content="traintickets__sub">
+                                    <div class="tabs-panel is-active" id="panel20">
+                                        <form class="calc_form-main" action="index.html" method="post">
+                                            <div class="calc-main_city__inner">
+                                                <div class="calc-main_city__block city__block-one">
+                                                    <span class="text-middle">Откуда</span>
+                                                    <div class="calc-input">
+                                                        <div class="calc-icon">
+                                                            <img src="./img/calc1.svg" alt="">
+                                                        </div>
+                                                        <input class="input__text" type="text" name="" value="" placeholder="Якутск">
+                                                    </div>
+                                                </div>
+                                                <div class="calc-main_city__block city__block-two">
+                                                    <span class="text-middle">Когда</span>
+                                                    <div class="calc-input">
+                                                        <input class="input__text" type="text" name="" value="" placeholder="18.06.20">
+                                                        <div class="calc-icon calc-calendar">
+                                                            <img src="./img/calendar.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc_arrow">
+                                                    <img src="./img/Arrow-calc.svg" alt="">
+                                                </div>
+                                                <div class="calc-main_city__block city__block-three">
+                                                    <span class="text-middle">Куда</span>
+                                                    <div class="calc-input">
+                                                        <div class="calc-icon calc-calendar">
+                                                            <img src="./img/calc2.svg" alt="">
+                                                        </div>
+                                                        <input class="input__text" type="text" name="" value="" placeholder="Город назначения">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row calc-main_center">
+                                                <div class="block">
+                                                    <div class="calc-check__content">
+                                                        <input class="custom-checkbox" id="check-1" type="checkbox" name="" value="">
+                                                        <label for="check-1" class="checkbox">
+                                                            <span class="text-middle">Без пересадок</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="block">
+                                                    <div class="calc-check__content">
+                                                        <input class="custom-checkbox" id="check-2" type="checkbox" name="" value="">
+                                                        <label for="check-2" class="checkbox">
+                                                            <span class="text-middle">± 3 дня</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="block">
+                                                    <div class="line">
+
+                                                    </div>
+                                                </div>
+                                                <div class="block">
+                                                    <div class="row">
+                                                        <div class="radio-block">
+                                                            <div class="form_radio">
+                                                                <input id="radio-1" type="radio" name="radio" value="1" checked>
+                                                                <label for="radio-1" class="text-middle">Все рейсы</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="radio-block">
+                                                            <div class="form_radio">
+                                                                <input id="radio-2" type="radio" name="radio" value="2">
+                                                                <label for="radio-2" class="text-middle">Регулярные</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="radio-block">
+                                                            <div class="form_radio">
+                                                                <input id="radio-3" type="radio" name="radio" value="3">
+                                                                <label for="radio-3" class="text-middle">Чартеры</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row-line">
+
+                                            </div>
+                                            <div class="calc-col__inner row">
+                                                <div class="calc-col__block">
+                                                    <div class="calc-col__item">
+                                                        <span class="text-middle">Взрослые</span>
+                                                        <span class="text-middle__grey">(от 12)</span>
+                                                        <div class="input-group plus-minus-input">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity">
+                                                                    <div class="minus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                            <input class="input-group-field" type="number" name="quantity" min="1" value="1">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="plus" data-quantity="plus" data-field="quantity">
+                                                                    <div class="plus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-col__block">
+                                                    <div class="calc-col__item">
+                                                        <span class="text-middle">Дети</span>
+                                                        <span class="text-middle__grey">(2-12)</span>
+                                                        <div class="input-group plus-minus-input">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity1">
+                                                                    <div class="minus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                            <input class="input-group-field" type="number" name="quantity1" min="0" value="0">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="plus" data-quantity="plus" data-field="quantity1">
+                                                                    <div class="plus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-col__block">
+                                                    <div class="calc-col__item">
+                                                        <span class="text-middle">Младенцы</span>
+                                                        <span class="text-middle__grey">(0-2) без места</span>
+                                                        <div class="input-group plus-minus-input">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity2">
+                                                                    <div class="minus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                            <input class="input-group-field" type="number" name="quantity2" min="0" value="0">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="plus" data-quantity="plus" data-field="quantity2">
+                                                                    <div class="plus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-col__block">
+                                                    <div class="calc-col__item">
+                                                        <span class="text-middle">Младенцы</span>
+                                                        <span class="text-middle__grey">(0-2) с местом</span>
+                                                        <div class="input-group plus-minus-input">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity3">
+                                                                    <div class="minus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                            <input class="input-group-field" type="number" name="quantity3" min="0" value="0">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="plus" data-quantity="plus" data-field="quantity3">
+                                                                    <div class="plus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-col__block">
+                                                    <div class="calc-col__item">
+                                                        <span class="text-middle">Молодёжь</span>
+                                                        <span class="text-middle__grey">(12-23)</span>
+                                                        <div class="input-group plus-minus-input">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity4">
+                                                                    <div class="minus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                            <input class="input-group-field" type="number" name="quantity4" min="0" value="0">
+                                                            <div class="input-group-button">
+                                                                <button type="button" class="plus" data-quantity="plus" data-field="quantity4">
+                                                                    <div class="plus_ico"></div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-col__block">
+                                                    <div class="calc-sumbit__inner">
+
+                                                        <input class="input__submit" type="submit" name="" value="Найти">
+                                                        <div class="calc-sumbit__loop">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tabs-panel" id="panel21">
+                                        1
+                                    </div>
+                                    <div class="tabs-panel" id="panel22">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-panel" id="aerocargo">
+                                <div class="tabs-content" data-tabs-content="aerocargo__sub">
+                                    <div class="tabs-panel is-active" id="panel20">
+                                        <form class="calc_form-main" action="index.html" method="post">
+                                            <div class="calc-content">
+                                                <div class="calc-content__settings __cargo">
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoFrom">Откуда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon" for="aeroCargoFrom">
+                                                                <img src="./img/calc1.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroCargoFrom" placeholder="Якутск">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoWhere">Куда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon" for="aeroCargoWhere">
+                                                                <img src="./img/calc2.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroCargoWhere" placeholder="Москва">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoWeight">Вес посылки (кг)</label>
+                                                        <div class="calc-content__group">
+                                                            <input type="number" class="calc-content__input" name="" value="" id="aeroCargoWeight" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoLength">Длина (см)</label>
+                                                        <div class="calc-content__group">
+                                                            <input type="number" class="calc-content__input" name="" value="" id="aeroCargoLength" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoWidth">Ширина (см)</label>
+                                                        <div class="calc-content__group">
+                                                            <input type="number" class="calc-content__input" name="" value="" id="aeroCargoWidth" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoHeight">Высота (см)</label>
+                                                        <div class="calc-content__group">
+                                                            <input type="number" class="calc-content__input" name="" value="" id="aeroCargoHeight" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-content__bottom">
+                                                    <div class="calc-content__text">
+                                                        <span>*Ориентировочные стоимость и срок доставки</span>
+                                                    </div>
+                                                    <div class="calc-content__button __orange">
+                                                        <button>Рассчитать стоимость</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tabs-panel" id="panel21">
+                                        1
+                                    </div>
+                                    <div class="tabs-panel" id="panel22">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-panel" id="autocargo">
+                                <div class="tabs-content" data-tabs-content="traintickets__sub">
+                                    <div class="tabs-panel is-active" id="panel20">
+                                        <form class="calc_form-main" action="index.html" method="post">
+                                            <div class="calc-content">
+                                                <div class="calc-content__settings __cargo">
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoFrom">Откуда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon" for="aeroCargoFrom">
+                                                                <img src="./img/calc1-cargo.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroCargoFrom" placeholder="Якутск">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoWhere">Куда</label>
+                                                        <div class="calc-content__group">
+                                                            <label class="calc-content__input-icon" for="aeroCargoWhere">
+                                                                <img src="./img/calc1-cargo.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroCargoWhere" placeholder="Москва">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoWeight">Вес посылки (кг)</label>
+                                                        <div class="calc-content__group">
+                                                            <input type="number" class="calc-content__input" name="" value="" id="aeroCargoWeight" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoLength">Длина (см)</label>
+                                                        <div class="calc-content__group">
+                                                            <input type="number" class="calc-content__input" name="" value="" id="aeroCargoLength" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoWidth">Ширина (см)</label>
+                                                        <div class="calc-content__group">
+                                                            <input type="number" class="calc-content__input" name="" value="" id="aeroCargoWidth" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="calc-content__settings-item">
+                                                        <label class="calc-content__settings-title" for="aeroCargoHeight">Высота (см)</label>
+                                                        <div class="calc-content__group">
+                                                            <input type="number" class="calc-content__input" name="" value="" id="aeroCargoHeight" placeholder="0">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc-content__bottom">
+                                                    <div class="calc-content__text">
+                                                        <span>*Ориентировочные стоимость и срок доставки</span>
+                                                    </div>
+                                                    <div class="calc-content__button __orange">
+                                                        <button>Рассчитать стоимость</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tabs-panel" id="panel21">
+                                        1
+                                    </div>
+                                    <div class="tabs-panel" id="panel22">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="section special">
+                <div class="container">
+                    <div class="section_title">
+                        <h1>Специальные предложения</h1>
+                        <a href="#" class="title_url svg-hover">
+                            <span class="sm-hidden">Все спецпредложения</span>
+                            <span class="sm-visible">Все</span>
+                            <img src="./img/arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="lg-3 sm-12 block">
+                            <a href="#" class="section_content background-item">
+                                <div class="background-image" style="background-image:url(img/special_1.png)"></div>
+                                <span class="special_city img_title">Сеул</span>
+                                <span class="special_city_out img_title-small">из Якутска</span>
+                                <span class="special_price img_title">от 14 500 ₽.</span>
+                            </a>
+                        </div>
+                        <div class="lg-3 sm-12 block">
+                            <a href="#" class="section_content background-item">
+                                <div class="background-image" style="background-image:url(img/special_2.png)"></div>
+                                <span class="special_city img_title">Москва</span>
+                                <span class="special_city_out img_title-small">из Якутска</span>
+                                <span class="special_price img_title">от 9 500 ₽.</span>
+                            </a>
+                        </div>
+                        <div class="lg-3 sm-12 block">
+                            <a href="#" class="section_content background-item">
+                                <div class="background-image" style="background-image:url(img/special_3.png)"></div>
+                                <span class="special_city img_title">Тбилиси</span>
+                                <span class="special_city_out img_title-small">из Якутска</span>
+                                <span class="special_price img_title">от 12 500 ₽.</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section main-news">
+                <div class="container">
+                    <div class="section_title">
+                        <h1>Новости компании</h1>
+                        <a href="#" class="title_url svg-hover">
+                            <span class="sm-hidden">Все новости</span>
+                            <span class="sm-visible">Все</span>
+                            <img src="./img/arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="lg-2 sm-12 block">
+                            <a href="#" class="news_content background-item">
+                                <div class="news-meta">
+                                    <div class="news-meta__item">
+                                        <img src="./img/photo.svg" alt="">
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                                <div class="background-image" style="background-image:url(img/news_1.png)"></div>
+                                <div class="news_content__inner">
+                                    <span class="margin-bottom img_title-upper">советы путешественникам</span>
+                                    <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
+                                    <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
+                                    <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg-3 sm-12 block">
+                            <a href="#" class="news_content background-item">
+                                <div class="news-meta">
+                                    <div class="news-meta__item">
+                                        <img src="./img/photo.svg" alt="">
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                                <div class="background-image" style="background-image:url(img/news_2.png)"></div>
+                                <div class="news_content__inner news-white">
+                                    <div class="news_date">
+                                        <span class="news_date__number">30</span>
+                                        <span class="news_date__month">Мая<br> 16:40</span>
+                                    </div>
+                                    <span class="margin-bottom img_title">Грузоперевозки изнутри - как это происходит?</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg-3 md-6 sm-12 block">
+                            <a href="#" class="news_content-2 background-item">
+                                <div class="news-meta">
+                                    <div class="news-meta__item">
+                                        <img src="./img/photo.svg" alt="">
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                                <div class="background-image" style="background-image:url(img/news_3.png)"></div>
+                                <div class="news_content__inner-2">
+                                    <span class="margin-bottom img_title-upper">Фотография</span>
+                                    <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
+                                    <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
+                                    <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="lg-2 md-6 sm-12 block">
+                            <div class="row mini_news-inner">
+                                <div class="col-12 block">
+                                    <a href="#" class="news_content-small background-item">
+                                        <div class="news-meta">
+                                            <div class="news-meta__item">
+                                                <img src="./img/photo.svg" alt="">
+                                                <span>34</span>
+                                            </div>
+                                        </div>
+                                        <div class="background-image" style="background-image:url(img/news_4.png)"></div>
+                                        <div class="news_content-small__desc">
+                                            <span class="margin-bottom img_title-upper">ЛИКБЕЗ</span>
+                                            <span class="margin-bottom img_title">Межтерминальная перевозка</span>
+                                            <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-6 block">
+                                    <a href="#" class="news_content-smaller background-item">
+                                        <div class="news_content-smaller__img">
+                                            <div class="background-image" style="background-image:url(img/news_5.png)"></div>
+                                        </div>
+                                        <div class="news_content-smaller__desc">
+                                            <span class="margin-bottom img_title">Как отправить большой груз?</span>
+                                            <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-6 block">
+                                    <a href="#" class="news_content-smaller background-item">
+                                        <div class="news_content-smaller__img">
+                                            <div class="background-image" style="background-image:url(img/news_6.png)"></div>
+                                        </div>
+                                        <div class="news_content-smaller__desc">
+                                            <span class="margin-bottom img_title">Как организовать хранение холодного багажа?</span>
+                                            <span class="margin-bottom img_title-lower">10.06.2020</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section main-us back-grey">
+                <div class="container">
+                    <div class="section_title">
+                        <h1>СВТранс - быстро, качественно, надежно</h1>
+                    </div>
+                    <div class="adv_info">
+                        <p>Общество с ограниченной ответственностью «СВТранс» работает на рынке транспортных услуг с декабря 2006 года. Свидетельство о государственной регистрации № 1064704037903 от 05 декабря 2006 года.</p>
+                    </div>
+
+                    <div class="row adv_inner">
+                        <div class="col-4 block">
+                            <div class="adv_content">
+                                <div class="adv_content__img">
+                                    <img src="./img/adv1.png" alt="">
+                                </div>
+                                <div class="adv_content__desc">
+                                    <span>Учреждено в 2006 г.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 block">
+                            <div class="adv_content">
+                                <div class="adv_content__img">
+                                    <img src="./img/adv2.png" alt="">
+                                </div>
+                                <div class="adv_content__desc">
+                                    <span>Прямой агент авиакомпаний</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 block">
+                            <div class="adv_content">
+                                <div class="adv_content__img">
+                                    <img src="./img/adv3.png" alt="">
+                                </div>
+                                <div class="adv_content__desc">
+                                    <span>Развитая сеть авиакасс в РС (Я)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 block">
+                            <div class="adv_content">
+                                <div class="adv_content__img">
+                                    <img src="./img/adv4.png" alt="">
+                                </div>
+                                <div class="adv_content__desc">
+                                    <span>Аккредитовано ТКП г. Москва*</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="service__inner">
+                        <div class="service__block">
+                            <div class="service__img" style="background-image:url(img/service1.png)"></div>
+                            <div class="service__content">
+                                <h3>Грузоперевозки</h3>
+                                <p>Полный комплекс услуг по организации мультимодальных перевозок</p>
+                                <a href="#" class="button service__button yellow">Заказать</a>
+                            </div>
+                        </div>
+                        <div class="service__block">
+                            <div class="service__img" style="background-image:url(img/service2.png)"></div>
+                            <div class="service__content">
+                                <h3>Авиабилеты</h3>
+                                <p>Купить билеты по разным направлениям и выгодным ценам</p>
+                                <a href="#" class="button service__button blue">Купить</a>
+                            </div>
+                        </div>
+                        <div class="service__block">
+                            <div class="service__img" style="background-image:url(img/service3.png)"></div>
+                            <div class="service__content">
+                                <h3>Заказ чартера</h3>
+                                <p>Заказать чартерный рейс</p>
+                                <a href="#" class="button service__button black">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section main-subscribe banner">
+                <div class="container">
+                    <div class="banner_mail">
+                        <div class="banner_mail__content">
+                            <h3>Подпишитесь на нашу рассылку</h3>
+                            <p>Получайте вдохновение для путешествий, советы и лучшие предложения от СВТранс</p>
+                            <form class="banner_mail__form" action="index.html" method="post">
+                                <input class="input__text" type="text" name="" value="" placeholder="Ваш E-mail">
+                                <input class="input__submit" type="sumbit" name="" value="Подписаться">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
             <div class="container">
-               <div class="header_bottom__inner">
-                  <div class="header_bottom__menu">
-                     <ul class="dropdown menu" data-dropdown-menu>
+                <div class="footer_inner sm-hidden">
+                    <div class="footer_info footer__block">
+                        <div class="footer_logo">
+                            <img src="./img/footer_logo.svg" alt="">
+                        </div>
+                        <div class="footer__sub" data-da="footer_inner,last,1136">
+                            <div class="footer__sub-title">
+                                Есть вопросы?
+                            </div>
+                            <form class="footer__sub-group">
+                                <input type="text" class="footer__sub-input" placeholder="Ваш телефон">
+                                <button type="submit" class="footer__sub-submit">Отправить</button>
+                            </form>
+                            <div class="footer__sub-privacy">Нажимая на кнопку вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
+                        </div>
+                    </div>
+                    <div class="footer_menu footer__block">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li><a href="">Купить билет</a></li>
+                            <li><a href="">Грузовые перевозки</a></li>
+                            <li>
+                                <a href="#">Документы и справка</a>
+                                <ul class="menu">
+                                    <li><a href="#">Документы</a></li>
+                                    <li><a href="#">справка</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">О компании</a>
+                                <ul class="menu">
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                                <ul class="menu">
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Спецпредложения</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_contact footer__block" data-da="footer_info,last,1136">
+                        <div class="footer_contact__content">
+                            <ul>
+                                <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Пассажирские перевозки: <b>(4112) 402-409</b></li>
+                                <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Грузовые перевозки: <b>(4112) 204-420</b></li>
+                                <li><img src="./img/mail.svg" alt="" class="icon__margin-right"> <a href="mailto:svtranssakha@mail.ru">svtranssakha@mail.ru</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_visa">
+                            <ul>
+                                <li><img src="./img/visa_1.svg" alt=""></li>
+                                <li><img src="./img/visa_2.svg" alt=""></li>
+                                <li><img src="./img/visa_3.svg" alt=""></li>
+                                <li><img src="./img/visa_4.svg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__mobile sm-visible">
+                    <div class="footer__mobile-logo">
+                        <img src="./img/footer_logo.svg" alt="">
+                    </div>
+                    <ul class="vertical menu accordion-menu mobile-menu__accordion" data-accordion-menu>
                         <li><a href="#">Купить билет</a></li>
                         <li><a href="#">Грузовые перевозки</a></li>
                         <li>
-                           <a href="#">Документы и справка</a>
-                           <ul class="menu">
-                              <li><a href="#">Документы</a></li>
-                              <li><a href="#">Справка</a></li>
-                           </ul>
-                        </li>
-                        <li><a href="#">О компании</a></li>
-                        <li>
-                           <a href="#">Контакты</a>
-                           <ul class="menu">
-                              <li><a href="#">Офис</a></li>
-                              <li><a href="#">Склад</a></li>
-                              <li><a href="#">Авиакассы</a></li>
-                           </ul>
+                            <a href="#">Документы и справка</a>
+                            <ul class="menu vertical mobile-menu__submenu">
+                                <li><a href="#">Автоперевозки</a></li>
+                                <li><a href="#">Авиаперевозки</a></li>
+                                <li><a href="#">Речные перевозки</a></li>
+                                <li><a href="#">Для покупателей авиабилетов</a></li>
+                                <li><a href="#">Для бизнеса</a></li>
+                            </ul>
                         </li>
                         <li><a href="#">Новости</a></li>
                         <li><a href="#">Спецпредложения</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="main">
-
-         <div class="slider">
-            <div class="container">
-
-               <div class="slider-wrapper">
-                  <div class="slider-content">
-                     <div class="slide">
-                        <div class="slider__img" style="background-image:url(img/slide1.png)">
-
-                        </div>
-                        <div class="slider__text">
-                           <div class="slider__text-content">
-                               <div class="polygon">
-                                   <div class="polygon__title">Полный комплекс по организации мультимодальных перевозок —
-                                       <span>
-                                           авиаперевозки грузов по России, международные авиаперевозки, складская обработка и хранение груза.
-                                       </span>
-                                   </div>
-                               </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="slide">
-                        <div class="slider__img" style="background-image:url(https://via.placeholder.com/1200x900/)">
-
-                        </div>
-                        <div class="slider__text">
-                            <div class="polygon">
-                                <div class="polygon__title">Lorem ipsum dolor sit —
-                                    <span>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum porro officiis, nam.
-                                    </span>
-                                </div>
+                    </ul>
+                    <div class="mobile-menu__contact">
+                        <div class="mobile-menu__contact-item">
+                            <div class="mobile-menu__contact-icon">
+                                <img src="./img/phone.svg" alt="">
+                            </div>
+                            <div class="mobile-menu__contact-text">
+                                Пассажирские перевозки:<br>
+                                <span>(4112) 402-409</span>
                             </div>
                         </div>
-                     </div>
-                     <div class="slide">
-                        <div class="slider__img" style="background-image:url(https://via.placeholder.com/200x400/)">
-
-                        </div>
-                        <div class="slider__text">
-                            <div class="polygon">
-                                <div class="polygon__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corrupti molestiae at nesciunt, id laborum. —
-                                    <span>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed architecto illo omnis sapiente debitis a inventore quo consequatur autem, harum?
-                                    </span>
-                                </div>
+                        <div class="mobile-menu__contact-item">
+                            <div class="mobile-menu__contact-icon">
+                                <img src="./img/phone.svg" alt="">
+                            </div>
+                            <div class="mobile-menu__contact-text">
+                                Грузовые перевозки:<br>
+                                <span>(4112) 204-420</span>
                             </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
-
+                        <div class="mobile-menu__contact-item">
+                            <div class="mobile-menu__contact-icon">
+                                <img src="./img/mail.svg" alt="">
+                            </div>
+                            <div class="mobile-menu__contact-text">
+                                <a href="#">svtranssakha@mail.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__sub">
+                        <div class="footer__sub-title">
+                            Есть вопросы?
+                        </div>
+                        <form class="footer__sub-group">
+                            <input type="text" class="footer__sub-input" placeholder="Ваш телефон">
+                            <button type="submit" class="footer__sub-submit">Отправить</button>
+                        </form>
+                        <div class="footer__sub-privacy">Нажимая на кнопку вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
+                    </div>
+                </div>
             </div>
-         </div>
-
-         <div class="calc">
-            <div class="container">
-               <div class="calc_form">
-
-                   <ul class="tabs calc_top" data-tabs id="calc-main__tabs">
-                       <li class="tabs-title is-active"><a href="#aerotickets" aria-selected="true">Авиабилеты</a></li>
-                       <li class="tabs-title"><a data-tabs-target="traintickets" href="#traintickets">Ж/Д билеты</a></li>
-                       <li class="tabs-title"><a data-tabs-target="aerocargo" href="#aerocargo">Авиагруз</a></li>
-                       <li class="tabs-title"><a data-tabs-target="autocargo" href="#autocargo">Автогуз</a></li>
-                   </ul>
-                   <div class="tabs-content calc_content" data-tabs-content="calc-main__tabs">
-                       <div class="tabs-panel is-active" id="aerotickets">
-                           <ul class="tabs calc_bottom" data-tabs id="aerotickets__sub">
-                               <li class="tabs-title is-active"><a href="#panel10" aria-selected="true">В одну сторону</a></li>
-                               <li class="tabs-title"><a data-tabs-target="panel11" href="#panel11">Туда и обратно</a></li>
-                               <li class="tabs-title"><a data-tabs-target="panel12" href="#panel12">Сложный маршрут</a></li>
-                           </ul>
-                           <div class="tabs-content" data-tabs-content="aerotickets__sub">
-                               <div class="tabs-panel is-active" id="panel10">
-                                   <form class="calc_form-main" action="index.html" method="post">
-                                       <div class="calc-content">
-                                           <div class="calc-content__settings">
-                                               <div class="calc-content__settings-item __calc-from">
-                                                   <label class="calc-content__settings-title" for="aeroticketsFrom">Откуда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon" for="aeroticketsFrom">
-                                                           <img src="./img/calc1.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroticketsFrom" placeholder="Якутск">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item __calc-date">
-                                                   <label class="calc-content__settings-title" for="aeroticketsFromDate">Когда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon __icon-left" for="aeroticketsFromDate">
-                                                           <img src="./img/calendar.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon-left" name="" value="" id="aeroticketsFromDate" placeholder="18.09.2020">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item __calc-arrow">
-                                                   <img src="./img/Arrow-calc.svg" alt="">
-                                               </div>
-                                               <div class="calc-content__settings-item __calc-where"><!-- if not last element add style 'flex-grow: 1' -->
-                                                   <label class="calc-content__settings-title" for="aeroticketsWhere">Куда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon" for="aeroticketsWhere">
-                                                           <img src="./img/calc2.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroticketsWhere" placeholder="Москва">
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-content__selectors">
-                                               <div class="calc-content__checkboxes">
-                                                   <div class="calc-content__checkboxes-item">
-                                                       <input class="calc-content__input-checkbox" id="checkboxTransfer" type="checkbox" name="checkbox" value="">
-                                                       <label for="checkboxTransfer">
-                                                           <span class="calc-content__checkboxes-label">Без пересадок</span>
-                                                       </label>
-                                                   </div>
-                                                   <div class="calc-content__checkboxes-item">
-                                                       <input class="calc-content__input-checkbox" id="checkboxMoreDay" type="checkbox" name="checkbox" value="">
-                                                       <label for="checkboxMoreDay">
-                                                           <span class="calc-content__checkboxes-label">± 3 дня</span>
-                                                       </label>
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__selectors-deline"></div>
-                                               <div class="calc-content__radios">
-                                                   <div class="calc-content__radios-item">
-                                                       <input class="calc-content__input-radios" id="radioAll" type="radio" name="radio" value="">
-                                                       <label for="radioAll">
-                                                           <span class="calc-content__radios-label">Все рейсы</span>
-                                                       </label>
-                                                   </div>
-                                                   <div class="calc-content__radios-item">
-                                                       <input class="calc-content__input-radios" id="radioRegular" type="radio" name="radio" value="">
-                                                       <label for="radioRegular">
-                                                           <span class="calc-content__radios-label">Регулярные</span>
-                                                       </label>
-                                                   </div>
-                                                   <div class="calc-content__radios-item">
-                                                       <input class="calc-content__input-radios" id="radioCharter" type="radio" name="radio" value="">
-                                                       <label for="radioCharter">
-                                                           <span class="calc-content__radios-label">Чартеры</span>
-                                                       </label>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-content__deline"></div>
-                                           <div class="calc-content__bottom">
-                                               <div class="calc-content__counter">
-                                                   <div class="calc-content__counter-item">
-                                                       <span class="calc-content__counter-text">Взрослые</span>
-                                                       <span class="calc-content__counter-text __grey">(от 12)</span>
-                                                       <div class="input-group plus-minus-input">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity1">
-                                                                   <div class="minus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                           <input class="input-group-field" type="number" name="quantity1" min="1" value="1">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="plus" data-quantity="plus" data-field="quantity1">
-                                                                   <div class="plus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                                   <div class="calc-content__counter-item">
-                                                       <span class="calc-content__counter-text">Дети</span>
-                                                       <span class="calc-content__counter-text __grey">(2-12)</span>
-                                                       <div class="input-group plus-minus-input">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity2">
-                                                                   <div class="minus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                           <input class="input-group-field" type="number" name="quantity2" min="0" value="0">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="plus" data-quantity="plus" data-field="quantity2">
-                                                                   <div class="plus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                                   <div class="calc-content__counter-item">
-                                                       <span class="calc-content__counter-text">Младенцы</span>
-                                                       <span class="calc-content__counter-text __grey">(0-2) без места</span>
-                                                       <div class="input-group plus-minus-input">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity3">
-                                                                   <div class="minus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                           <input class="input-group-field" type="number" name="quantity3" min="0" value="0">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="plus" data-quantity="plus" data-field="quantity3">
-                                                                   <div class="plus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                                   <div class="calc-content__counter-item">
-                                                       <span class="calc-content__counter-text">Молодёжь</span>
-                                                       <span class="calc-content__counter-text __grey">(12-23)</span>
-                                                       <div class="input-group plus-minus-input">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity4">
-                                                                   <div class="minus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                           <input class="input-group-field" type="number" name="quantity4" min="0" value="0">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="plus" data-quantity="plus" data-field="quantity4">
-                                                                   <div class="plus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__button">
-                                                   <button>Найти <img src="./img/loop.svg" alt=""></button>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </form>
-                               </div>
-                               <div class="tabs-panel" id="panel11">
-                                   <form class="calc_form-main" action="index.html" method="post">
-                                       <div class="calc-content">
-                                           <div class="calc-content__settings">
-                                               <div class="calc-content__settings-item __calc-from">
-                                                   <label class="calc-content__settings-title" for="aeroticketsFrom">Откуда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon" for="aeroticketsFrom">
-                                                           <img src="./img/calc1.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroticketsFrom" placeholder="Якутск">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item __calc-date">
-                                                   <label class="calc-content__settings-title" for="aeroticketsFromDate">Когда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon __icon-left" for="aeroticketsFromDate">
-                                                           <img src="./img/calendar.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon-left" name="" value="" id="aeroticketsFromDate" placeholder="18.09.2020">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item __calc-arrow">
-                                                   <img src="./img/Arrow-calc.svg" alt="">
-                                               </div>
-                                               <div class="calc-content__settings-item __calc-where" style="flex-grow: 1"><!-- if not last element add style 'flex-grow: 1' -->
-                                                   <label class="calc-content__settings-title" for="aeroticketsWhere">Куда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon" for="aeroticketsWhere">
-                                                           <img src="./img/calc2.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroticketsWhere" placeholder="Москва">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item __calc-date">
-                                                   <label class="calc-content__settings-title" for="aeroticketsFromDate">Когда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon __icon-left" for="aeroticketsFromDate">
-                                                           <img src="./img/calendar.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon-left" name="" value="" id="aeroticketsFromDate" placeholder="18.09.2020">
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-content__selectors">
-                                               <div class="calc-content__checkboxes">
-                                                   <div class="calc-content__checkboxes-item">
-                                                       <input class="calc-content__input-checkbox" id="checkboxTransfer" type="checkbox" name="checkbox" value="">
-                                                       <label for="checkboxTransfer">
-                                                           <span class="calc-content__checkboxes-label">Без пересадок</span>
-                                                       </label>
-                                                   </div>
-                                                   <div class="calc-content__checkboxes-item">
-                                                       <input class="calc-content__input-checkbox" id="checkboxMoreDay" type="checkbox" name="checkbox" value="">
-                                                       <label for="checkboxMoreDay">
-                                                           <span class="calc-content__checkboxes-label">± 3 дня</span>
-                                                       </label>
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__selectors-deline"></div>
-                                               <div class="calc-content__radios">
-                                                   <div class="calc-content__radios-item">
-                                                       <input class="calc-content__input-radios" id="radioAll" type="radio" name="radio" value="">
-                                                       <label for="radioAll">
-                                                           <span class="calc-content__radios-label">Все рейсы</span>
-                                                       </label>
-                                                   </div>
-                                                   <div class="calc-content__radios-item">
-                                                       <input class="calc-content__input-radios" id="radioRegular" type="radio" name="radio" value="">
-                                                       <label for="radioRegular">
-                                                           <span class="calc-content__radios-label">Регулярные</span>
-                                                       </label>
-                                                   </div>
-                                                   <div class="calc-content__radios-item">
-                                                       <input class="calc-content__input-radios" id="radioCharter" type="radio" name="radio" value="">
-                                                       <label for="radioCharter">
-                                                           <span class="calc-content__radios-label">Чартеры</span>
-                                                       </label>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-content__deline"></div>
-                                           <div class="calc-content__bottom">
-                                               <div class="calc-content__counter">
-                                                   <div class="calc-content__counter-item">
-                                                       <span class="calc-content__counter-text">Взрослые</span>
-                                                       <span class="calc-content__counter-text __grey">(от 12)</span>
-                                                       <div class="input-group plus-minus-input">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity1">
-                                                                   <div class="minus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                           <input class="input-group-field" type="number" name="quantity1" min="1" value="1">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="plus" data-quantity="plus" data-field="quantity1">
-                                                                   <div class="plus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                                   <div class="calc-content__counter-item">
-                                                       <span class="calc-content__counter-text">Дети</span>
-                                                       <span class="calc-content__counter-text __grey">(2-12)</span>
-                                                       <div class="input-group plus-minus-input">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity2">
-                                                                   <div class="minus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                           <input class="input-group-field" type="number" name="quantity2" min="0" value="0">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="plus" data-quantity="plus" data-field="quantity2">
-                                                                   <div class="plus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                                   <div class="calc-content__counter-item">
-                                                       <span class="calc-content__counter-text">Младенцы</span>
-                                                       <span class="calc-content__counter-text __grey">(0-2) без места</span>
-                                                       <div class="input-group plus-minus-input">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity3">
-                                                                   <div class="minus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                           <input class="input-group-field" type="number" name="quantity3" min="0" value="0">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="plus" data-quantity="plus" data-field="quantity3">
-                                                                   <div class="plus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                                   <div class="calc-content__counter-item">
-                                                       <span class="calc-content__counter-text">Молодёжь</span>
-                                                       <span class="calc-content__counter-text __grey">(12-23)</span>
-                                                       <div class="input-group plus-minus-input">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity4">
-                                                                   <div class="minus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                           <input class="input-group-field" type="number" name="quantity4" min="0" value="0">
-                                                           <div class="input-group-button">
-                                                               <button type="button" class="plus" data-quantity="plus" data-field="quantity4">
-                                                                   <div class="plus_ico"></div>
-                                                               </button>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__button">
-                                                   <button>Найти <img src="./img/loop.svg" alt=""></button>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </form>
-                               </div>
-                               <div class="tabs-panel" id="panel12">
-                                   2
-                               </div>
-                           </div>
-                       </div>
-                       <div class="tabs-panel" id="traintickets">
-                           <ul class="tabs calc_bottom" data-tabs id="traintickets__sub">
-                               <li class="tabs-title is-active"><a href="#panel20" aria-selected="true">В одну сторону</a></li>
-                               <li class="tabs-title"><a data-tabs-target="panel21" href="#panel21">Туда и обратно</a></li>
-                               <li class="tabs-title"><a data-tabs-target="panel22" href="#panel22">Сложный маршрут</a></li>
-                           </ul>
-                           <div class="tabs-content" data-tabs-content="traintickets__sub">
-                               <div class="tabs-panel is-active" id="panel20">
-                                   <form class="calc_form-main" action="index.html" method="post">
-                                       <div class="calc-main_city__inner">
-                                           <div class="calc-main_city__block city__block-one">
-                                               <span class="text-middle">Откуда</span>
-                                               <div class="calc-input">
-                                                   <div class="calc-icon">
-                                                       <img src="./img/calc1.svg" alt="">
-                                                   </div>
-                                                   <input class="input__text" type="text" name="" value="" placeholder="Якутск">
-                                               </div>
-                                           </div>
-                                           <div class="calc-main_city__block city__block-two">
-                                               <span class="text-middle">Когда</span>
-                                               <div class="calc-input">
-                                                   <input class="input__text" type="text" name="" value="" placeholder="18.06.20">
-                                                   <div class="calc-icon calc-calendar">
-                                                       <img src="./img/calendar.svg" alt="">
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc_arrow">
-                                               <img src="./img/Arrow-calc.svg" alt="">
-                                           </div>
-                                           <div class="calc-main_city__block city__block-three">
-                                               <span class="text-middle">Куда</span>
-                                               <div class="calc-input">
-                                                   <div class="calc-icon calc-calendar">
-                                                       <img src="./img/calc2.svg" alt="">
-                                                   </div>
-                                                   <input class="input__text" type="text" name="" value="" placeholder="Город назначения">
-                                               </div>
-                                           </div>
-                                       </div>
-                                       <div class="row calc-main_center">
-                                           <div class="block">
-                                               <div class="calc-check__content">
-                                                   <input class="custom-checkbox" id="check-1" type="checkbox" name="" value="">
-                                                   <label for="check-1" class="checkbox">
-                                                       <span class="text-middle">Без пересадок</span>
-                                                   </label>
-                                               </div>
-                                           </div>
-                                           <div class="block">
-                                               <div class="calc-check__content">
-                                                   <input class="custom-checkbox" id="check-2" type="checkbox" name="" value="">
-                                                   <label for="check-2" class="checkbox">
-                                                       <span class="text-middle">± 3 дня</span>
-                                                   </label>
-                                               </div>
-                                           </div>
-                                           <div class="block">
-                                               <div class="line">
-
-                                               </div>
-                                           </div>
-                                           <div class="block">
-                                               <div class="row">
-                                                   <div class="radio-block">
-                                                       <div class="form_radio">
-                                                           <input id="radio-1" type="radio" name="radio" value="1" checked>
-                                                           <label for="radio-1" class="text-middle">Все рейсы</label>
-                                                       </div>
-                                                   </div>
-                                                   <div class="radio-block">
-                                                       <div class="form_radio">
-                                                           <input id="radio-2" type="radio" name="radio" value="2">
-                                                           <label for="radio-2" class="text-middle">Регулярные</label>
-                                                       </div>
-                                                   </div>
-                                                   <div class="radio-block">
-                                                       <div class="form_radio">
-                                                           <input id="radio-3" type="radio" name="radio" value="3">
-                                                           <label for="radio-3" class="text-middle">Чартеры</label>
-                                                       </div>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                       </div>
-                                       <div class="row-line">
-
-                                       </div>
-                                       <div class="calc-col__inner row">
-                                           <div class="calc-col__block">
-                                               <div class="calc-col__item">
-                                                   <span class="text-middle">Взрослые</span>
-                                                   <span class="text-middle__grey">(от 12)</span>
-                                                   <div class="input-group plus-minus-input">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity">
-                                                               <div class="minus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                       <input class="input-group-field" type="number" name="quantity" min="1" value="1">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="plus" data-quantity="plus" data-field="quantity">
-                                                               <div class="plus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-col__block">
-                                               <div class="calc-col__item">
-                                                   <span class="text-middle">Дети</span>
-                                                   <span class="text-middle__grey">(2-12)</span>
-                                                   <div class="input-group plus-minus-input">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity1">
-                                                               <div class="minus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                       <input class="input-group-field" type="number" name="quantity1" min="0" value="0">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="plus" data-quantity="plus" data-field="quantity1">
-                                                               <div class="plus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-col__block">
-                                               <div class="calc-col__item">
-                                                   <span class="text-middle">Младенцы</span>
-                                                   <span class="text-middle__grey">(0-2) без места</span>
-                                                   <div class="input-group plus-minus-input">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity2">
-                                                               <div class="minus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                       <input class="input-group-field" type="number" name="quantity2" min="0" value="0">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="plus" data-quantity="plus" data-field="quantity2">
-                                                               <div class="plus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-col__block">
-                                               <div class="calc-col__item">
-                                                   <span class="text-middle">Младенцы</span>
-                                                   <span class="text-middle__grey">(0-2) с местом</span>
-                                                   <div class="input-group plus-minus-input">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity3">
-                                                               <div class="minus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                       <input class="input-group-field" type="number" name="quantity3" min="0" value="0">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="plus" data-quantity="plus" data-field="quantity3">
-                                                               <div class="plus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-col__block">
-                                               <div class="calc-col__item">
-                                                   <span class="text-middle">Молодёжь</span>
-                                                   <span class="text-middle__grey">(12-23)</span>
-                                                   <div class="input-group plus-minus-input">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="minus disabled" data-quantity="minus" data-field="quantity4">
-                                                               <div class="minus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                       <input class="input-group-field" type="number" name="quantity4" min="0" value="0">
-                                                       <div class="input-group-button">
-                                                           <button type="button" class="plus" data-quantity="plus" data-field="quantity4">
-                                                               <div class="plus_ico"></div>
-                                                           </button>
-                                                       </div>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-col__block">
-                                               <div class="calc-sumbit__inner">
-
-                                                   <input class="input__submit" type="submit" name="" value="Найти">
-                                                   <div class="calc-sumbit__loop">
-
-                                                   </div>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </form>
-                               </div>
-                               <div class="tabs-panel" id="panel21">
-                                   1
-                               </div>
-                               <div class="tabs-panel" id="panel22">
-                                   2
-                               </div>
-                           </div>
-                       </div>
-                       <div class="tabs-panel" id="aerocargo">
-                           <div class="tabs-content" data-tabs-content="aerocargo__sub">
-                               <div class="tabs-panel is-active" id="panel20">
-                                   <form class="calc_form-main" action="index.html" method="post">
-                                       <div class="calc-content">
-                                           <div class="calc-content__settings __cargo">
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoFrom">Откуда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon" for="aeroCargoFrom">
-                                                           <img src="./img/calc1.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroCargoFrom" placeholder="Якутск">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoWhere">Куда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon" for="aeroCargoWhere">
-                                                           <img src="./img/calc2.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroCargoWhere" placeholder="Москва">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoWeight">Вес посылки (кг)</label>
-                                                   <div class="calc-content__group">
-                                                       <input type="number" class="calc-content__input" name="" value="" id="aeroCargoWeight" placeholder="0">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoLength">Длина (см)</label>
-                                                   <div class="calc-content__group">
-                                                       <input type="number" class="calc-content__input" name="" value="" id="aeroCargoLength" placeholder="0">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoWidth">Ширина (см)</label>
-                                                   <div class="calc-content__group">
-                                                       <input type="number" class="calc-content__input" name="" value="" id="aeroCargoWidth" placeholder="0">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoHeight">Высота (см)</label>
-                                                   <div class="calc-content__group">
-                                                       <input type="number" class="calc-content__input" name="" value="" id="aeroCargoHeight" placeholder="0">
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-content__bottom">
-                                               <div class="calc-content__text">
-                                                   <span>*Ориентировочные стоимость и срок доставки</span>
-                                               </div>
-                                               <div class="calc-content__button __orange">
-                                                   <button>Рассчитать стоимость</button>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </form>
-                               </div>
-                               <div class="tabs-panel" id="panel21">
-                                   1
-                               </div>
-                               <div class="tabs-panel" id="panel22">
-                                   2
-                               </div>
-                           </div>
-                       </div>
-                       <div class="tabs-panel" id="autocargo">
-                           <div class="tabs-content" data-tabs-content="traintickets__sub">
-                               <div class="tabs-panel is-active" id="panel20">
-                                   <form class="calc_form-main" action="index.html" method="post">
-                                       <div class="calc-content">
-                                           <div class="calc-content__settings __cargo">
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoFrom">Откуда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon" for="aeroCargoFrom">
-                                                           <img src="./img/calc1-cargo.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroCargoFrom" placeholder="Якутск">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoWhere">Куда</label>
-                                                   <div class="calc-content__group">
-                                                       <label class="calc-content__input-icon" for="aeroCargoWhere">
-                                                           <img src="./img/calc1-cargo.svg" alt="">
-                                                       </label>
-                                                       <input type="text" class="calc-content__input __with-icon" name="" value="" id="aeroCargoWhere" placeholder="Москва">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoWeight">Вес посылки (кг)</label>
-                                                   <div class="calc-content__group">
-                                                       <input type="number" class="calc-content__input" name="" value="" id="aeroCargoWeight" placeholder="0">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoLength">Длина (см)</label>
-                                                   <div class="calc-content__group">
-                                                       <input type="number" class="calc-content__input" name="" value="" id="aeroCargoLength" placeholder="0">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoWidth">Ширина (см)</label>
-                                                   <div class="calc-content__group">
-                                                       <input type="number" class="calc-content__input" name="" value="" id="aeroCargoWidth" placeholder="0">
-                                                   </div>
-                                               </div>
-                                               <div class="calc-content__settings-item">
-                                                   <label class="calc-content__settings-title" for="aeroCargoHeight">Высота (см)</label>
-                                                   <div class="calc-content__group">
-                                                       <input type="number" class="calc-content__input" name="" value="" id="aeroCargoHeight" placeholder="0">
-                                                   </div>
-                                               </div>
-                                           </div>
-                                           <div class="calc-content__bottom">
-                                               <div class="calc-content__text">
-                                                   <span>*Ориентировочные стоимость и срок доставки</span>
-                                               </div>
-                                               <div class="calc-content__button __orange">
-                                                   <button>Рассчитать стоимость</button>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </form>
-                               </div>
-                               <div class="tabs-panel" id="panel21">
-                                   1
-                               </div>
-                               <div class="tabs-panel" id="panel22">
-                                   2
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-
-
-               </div>
-            </div>
-         </div>
-
-         <div class="section">
-            <div class="container">
-               <div class="section_title">
-                  <h1>Специальные предложения</h1>
-                  <a href="#" class="title_url svg-hover">
-                     Все спецпредложения
-                     <img src="./img/arrow-right.svg" alt="">
-                  </a>
-               </div>
-               <div class="row">
-                  <div class="lg-3 block">
-                     <a href="#" class="section_content background-item">
-                        <div class="background-image" style="background-image:url(img/special_1.png)"></div>
-                        <span class="special_city img_title">Сеул</span>
-                        <span class="special_city_out img_title-small">из Якутска</span>
-                        <span class="special_price img_title">от 14 500 ₽.</span>
-                     </a>
-                  </div>
-                  <div class="lg-3 block">
-                     <a href="#" class="section_content background-item">
-                        <div class="background-image" style="background-image:url(img/special_2.png)"></div>
-                        <span class="special_city img_title">Москва</span>
-                        <span class="special_city_out img_title-small">из Якутска</span>
-                        <span class="special_price img_title">от 9 500 ₽.</span>
-                     </a>
-                  </div>
-                  <div class="lg-3 block">
-                     <a href="#" class="section_content background-item">
-                        <div class="background-image" style="background-image:url(img/special_3.png)"></div>
-                        <span class="special_city img_title">Тбилиси</span>
-                        <span class="special_city_out img_title-small">из Якутска</span>
-                        <span class="special_price img_title">от 12 500 ₽.</span>
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <div class="section">
-            <div class="container">
-               <div class="section_title">
-                  <h1>Новости компании</h1>
-                  <a href="#" class="title_url svg-hover">
-                     Все новости
-                     <img src="./img/arrow-right.svg" alt="">
-                  </a>
-               </div>
-               <div class="row">
-                  <div class="lg-2 block">
-                     <a href="#" class="news_content background-item">
-                        <div class="news-meta">
-                           <div class="news-meta__item">
-                              <img src="./img/photo.svg" alt="">
-                              <span>34</span>
-                           </div>
-                        </div>
-                        <div class="background-image" style="background-image:url(img/news_1.png)"></div>
-                        <div class="news_content__inner">
-                           <span class="margin-bottom img_title-upper">советы путешественникам</span>
-                           <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
-                           <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
-                           <span class="margin-bottom img_title-lower">10.06.2020</span>
-                        </div>
-                     </a>
-                  </div>
-                  <div class="lg-3 block">
-                     <a href="#" class="news_content background-item">
-                        <div class="news-meta">
-                           <div class="news-meta__item">
-                              <img src="./img/photo.svg" alt="">
-                              <span>34</span>
-                           </div>
-                        </div>
-                        <div class="background-image" style="background-image:url(img/news_2.png)"></div>
-                        <div class="news_content__inner news-white">
-                           <div class="news_date">
-                              <span class="news_date__number">30</span>
-                              <span class="news_date__month">Мая<br> 16:40</span>
-                           </div>
-                           <span class="margin-bottom img_title">Грузоперевозки изнутри - как это происходит?</span>
-                        </div>
-                     </a>
-                  </div>
-                  <div class="lg-3 block">
-                     <a href="#" class="news_content-2 background-item">
-                        <div class="news-meta">
-                           <div class="news-meta__item">
-                              <img src="./img/photo.svg" alt="">
-                              <span>34</span>
-                           </div>
-                        </div>
-                        <div class="background-image" style="background-image:url(img/news_3.png)"></div>
-                        <div class="news_content__inner-2">
-                           <span class="margin-bottom img_title-upper">Фотография</span>
-                           <span class="margin-bottom img_title">Какие страны лояльны к путешественникам в период коронавируса</span>
-                           <span class="margin-bottom img_title-small">Страны, которые продолжают принимать путешественников, но не забывают о медицинском контроле</span>
-                           <span class="margin-bottom img_title-lower">10.06.2020</span>
-                        </div>
-                     </a>
-                  </div>
-                  <div class="lg-2 block">
-                     <div class="row mini_news-inner">
-                        <div class="col-12 block">
-                           <a href="#" class="news_content-small background-item">
-                              <div class="news-meta">
-                                 <div class="news-meta__item">
-                                    <img src="./img/photo.svg" alt="">
-                                    <span>34</span>
-                                 </div>
-                              </div>
-                              <div class="background-image" style="background-image:url(img/news_4.png)"></div>
-                              <div class="news_content-small__desc">
-                                 <span class="margin-bottom img_title-upper">ЛИКБЕЗ</span>
-                                 <span class="margin-bottom img_title">Межтерминальная перевозка</span>
-                                 <span class="margin-bottom img_title-lower">10.06.2020</span>
-                              </div>
-                           </a>
-                        </div>
-                        <div class="col-6 block">
-                           <a href="#" class="news_content-smaller background-item">
-                              <div class="news_content-smaller__img">
-                                 <div class="background-image" style="background-image:url(img/news_5.png)"></div>
-                              </div>
-                              <div class="news_content-smaller__desc">
-                                 <span class="margin-bottom img_title">Как отправить большой груз?</span>
-                                 <span class="margin-bottom img_title-lower">10.06.2020</span>
-                              </div>
-                           </a>
-                        </div>
-                        <div class="col-6 block">
-                           <a href="#" class="news_content-smaller background-item">
-                              <div class="news_content-smaller__img">
-                                 <div class="background-image" style="background-image:url(img/news_6.png)"></div>
-                              </div>
-                              <div class="news_content-smaller__desc">
-                                 <span class="margin-bottom img_title">Как организовать хранение холодного багажа?</span>
-                                 <span class="margin-bottom img_title-lower">10.06.2020</span>
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <div class="section back-grey">
-            <div class="container">
-               <div class="section_title">
-                  <h1>СВТранс - быстро, качественно, надежно</h1>
-               </div>
-               <div class="adv_info">
-                  <p>Общество с ограниченной ответственностью «СВТранс» работает на рынке транспортных услуг с декабря 2006 года. Свидетельство о государственной регистрации № 1064704037903 от 05 декабря 2006 года.</p>
-               </div>
-
-               <div class="row adv_inner">
-                  <div class="col-4 block">
-                     <div class="adv_content">
-                        <div class="adv_content__img">
-                           <img src="./img/adv1.png" alt="">
-                        </div>
-                        <div class="adv_content__desc">
-                           <span>Учреждено в 2006 г.</span>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-4 block">
-                     <div class="adv_content">
-                        <div class="adv_content__img">
-                           <img src="./img/adv2.png" alt="">
-                        </div>
-                        <div class="adv_content__desc">
-                           <span>Прямой агент авиакомпаний</span>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-4 block">
-                     <div class="adv_content">
-                        <div class="adv_content__img">
-                           <img src="./img/adv3.png" alt="">
-                        </div>
-                        <div class="adv_content__desc">
-                           <span>Развитая сеть авиакасс в РС (Я)</span>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-4 block">
-                     <div class="adv_content">
-                        <div class="adv_content__img">
-                           <img src="./img/adv4.png" alt="">
-                        </div>
-                        <div class="adv_content__desc">
-                           <span>Аккредитовано ТКП г. Москва*</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="container">
-               <div class="service__inner">
-                  <div class="service__block">
-                     <div class="service__img" style="background-image:url(img/service1.png)"></div>
-                     <div class="service__content">
-                        <h3>Грузоперевозки</h3>
-                        <p>Полный комплекс услуг по организации мультимодальных перевозок</p>
-                        <a href="#" class="button service__button yellow">Заказать</a>
-                     </div>
-                  </div>
-                  <div class="service__block">
-                     <div class="service__img" style="background-image:url(img/service2.png)"></div>
-                     <div class="service__content">
-                        <h3>Авиабилеты</h3>
-                        <p>Купить билеты по разным направлениям и выгодным ценам</p>
-                        <a href="#" class="button service__button blue">Купить</a>
-                     </div>
-                  </div>
-                  <div class="service__block">
-                     <div class="service__img" style="background-image:url(img/service3.png)"></div>
-                     <div class="service__content">
-                        <h3>Заказ чартера</h3>
-                        <p>Заказать чартерный рейс</p>
-                        <a href="#" class="button service__button black">Заказать</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <div class="section banner">
-            <div class="container">
-               <div class="banner_mail">
-                  <div class="banner_mail__content">
-                     <h3>Подпишитесь на нашу рассылку</h3>
-                     <p>Получайте вдохновение для путешествий, советы и лучшие предложения от СВТранс</p>
-                     <form class="banner_mail__form" action="index.html" method="post">
-                        <input class="input__text" type="text" name="" value="" placeholder="Ваш E-mail">
-                        <input class="input__submit" type="sumbit" name="" value="Подписаться">
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="footer">
-         <div class="container">
-            <div class="footer_inner">
-               <div class="footer_info footer__block">
-                  <div class="footer_logo">
-                     <img src="./img/footer_logo.svg" alt="">
-                  </div>
-                  <span class="footer_info__text">Есть вопросы?</span>
-                  <div class="footer_mailto">
-                     <div class="footer_mailto__text">
-                        <input class="input__text input__text-black" type="text" name="" value="" placeholder="Ваш телефон">
-                     </div>
-                     <div class="footer_mailto__button">
-                        <input class="input__submit btn" type="submit" name="" value="Отправить">
-                     </div>
-                  </div>
-                  <div class="footer_mailto-info">
-                     <span>Нажимая на кнопку вы соглашаетесь с <a href="#" class="blue">политикой конфиденциальности</a></span>
-                  </div>
-               </div>
-               <div class="footer_menu footer__block">
-                  <ul class="dropdown menu" data-dropdown-menu>
-                     <li><a href="">Купить билет</a></li>
-                     <li><a href="">Грузовые перевозки</a></li>
-                     <li>
-                        <a href="#">Документы и справка</a>
-                        <ul class="menu">
-                           <li><a href="#">Документы</a></li>
-                           <li><a href="#">справка</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#">О компании</a>
-                        <ul class="menu">
-                           <li><a href="#">О компании</a></li>
-                           <li><a href="#">Контакты</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#">Контакты</a>
-                        <ul class="menu">
-                           <li><a href="#">О компании</a></li>
-                           <li><a href="#">Контакты</a></li>
-                        </ul>
-                     </li>
-                     <li><a href="">Новости</a></li>
-                     <li><a href="">Спецпредложения</a></li>
-                  </ul>
-               </div>
-               <div class="footer_contact footer__block">
-                  <div class="footer_contact__content">
-                     <ul>
-                        <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Пассажирские перевозки: <b>(4112) 402-409</b></li>
-                        <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Грузовые перевозки: <b>(4112) 204-420</b></li>
-                        <li><img src="./img/mail.svg" alt="" class="icon__margin-right"> <a href="mailto:svtranssakha@mail.ru">svtranssakha@mail.ru</a></li>
-                     </ul>
-                  </div>
-                  <div class="footer_visa">
-                     <ul>
-                        <li><img src="./img/visa_1.svg" alt=""></li>
-                        <li><img src="./img/visa_2.svg" alt=""></li>
-                        <li><img src="./img/visa_3.svg" alt=""></li>
-                        <li><img src="./img/visa_4.svg" alt=""></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <script src="dist/foundation/js/vendor/jquery.js"></script>
-   <script src="dist/foundation/js/vendor/foundation.min.js"></script>
-   <script>
-      $(document).foundation();
-   </script>
-   <script src="dist/slick/slick.js"></script>
-   <script src="dist/progressBar.js"></script>
-   <script src="dist/main.js"></script>
+        </div>
+    </div>
+    <script src="dist/foundation/js/vendor/jquery.js"></script>
+    <script src="dist/foundation/js/vendor/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    <script src="dist/slick/slick.js"></script>
+    <script src="dist/progressBar.js"></script>
+    <script src="dist/dynamic-adaptive.js"></script>
+    <script src="dist/main.js"></script>
 </body>
 
 </html>

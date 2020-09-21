@@ -241,6 +241,7 @@ a:hover {
 .dropdown.menu > li > a {
 	display: flex;
 	padding: 0;
+	white-space: nowrap;
 }
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
 	border: none;
@@ -342,6 +343,9 @@ a:hover {
 }
 .top_search {
 	padding: 10px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
 }
 .top_search:hover svg path {
 	fill: #F57C00;
@@ -393,15 +397,23 @@ a:hover {
 	align-items: center;
 }
 .header_top__logo {
-  padding-right: 32px;
-  padding-top: 15px;
+	margin-right: 32px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+}
+.header_top__logo a {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
 }
 .header_bottom__menu > ul {
 	display: flex;
 	flex-direction: row;
 }
 .header_bottom__menu > ul > li {
-	padding-right: 24px;
+	margin-right: 24px;
 }
 .header_bottom__menu > ul > li > a {
 	display: flex;
@@ -458,9 +470,10 @@ a:hover {
 }
 .slider__text {
 	position: absolute;
-	top: 40%;
+	/* top: 40%; */
 	right: 0;
 	width: 612px;
+	margin-left: 16px;
 }
 .slider {
   position: relative;
@@ -470,6 +483,10 @@ a:hover {
 }
 .slide {
 	position: relative;
+	display: -webkit-flex!important;
+	display: -ms-flex!important;
+	display: flex!important;
+	align-items: center;
 }
 .slider .slick-slide {
   padding: 0;
@@ -724,7 +741,7 @@ a:hover {
 }
 .news-white {
 	background: #fff;
-	width: 268px;
+	width: 80%;
 	padding: 30px 20px;
 	color: #333;
 }
@@ -800,7 +817,7 @@ a:hover {
 	position: relative;
 }
 .service__content {
-	padding: 32px 60px;
+	padding: 32px;
 	color: #fff;
 	z-index: 10;
 	position: relative;

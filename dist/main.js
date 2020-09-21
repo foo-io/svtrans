@@ -121,3 +121,85 @@ $('img[src$=".svg"]').each(function() {
 		$img.replaceWith($svg);
 	}, 'xml');
 });
+
+// Изменение меню при ресайзе
+// window.addEventListener('resize', event => {
+// 	let windowWidth = screen.width;
+// 	let isResize = false;
+//
+//
+// 	if (windowWidth < 1136 && !isResize) {
+// 		let menuSelector = document.querySelector('.dropdown.menu');
+//
+// 		isResize = true;
+// 	}
+// }, false);
+
+// Открытие/закрытие бургера
+$('#mobile-menu').on('show.zf.dropdown', () => {
+	$('.header').css({position: 'fixed'});
+	$('body').css({overflow: 'hidden'});
+    $('.mobile-menu__burger-open').hide();
+    $('.mobile-menu__burger-close').show();
+});
+$('#mobile-menu').on('hide.zf.dropdown', () => {
+	$('.header').css({position: ''});
+	$('body').css({overflow: ''});
+    $('.mobile-menu__burger-open').show();
+    $('.mobile-menu__burger-close').hide();
+});
+
+// if (document.querySelector('.readmore'))
+// {
+// 	$(function(){
+// 		$('.readmore').readmore({
+// 			speed: 111111,
+// 			lessLink: '<div class="readmore__button"><a href="#">Скрыть</a></div>',
+// 			moreLink: '<div class="readmore__button"><a href="#">Подробнее...</a></div>',
+// 			collapsedHeight: 150,
+// 		});
+// 	});
+// }
+
+let isResize = false;
+let windowWidth = screen.width;
+
+if (document.querySelector('.readmore') && windowWidth < 846)
+{
+	$(function(){
+		$('.readmore').readmore({
+			lessLink: '<div class="readmore__button"><a href="#">Скрыть</a></div>',
+			moreLink: '<div class="readmore__button"><a href="#">Подробнее...</a></div>',
+			collapsedHeight: 100,
+		});
+	});
+}
+
+window.addEventListener('resize', () => {
+	let windowWidth = screen.width;
+
+	if (windowWidth < 846 && !isResize) {
+
+		if (document.querySelector('.readmore'))
+		{
+			$(function(){
+				$('.readmore').readmore({
+					speed: 111111,
+					lessLink: '<div class="readmore__button"><a href="#">Скрыть</a></div>',
+					moreLink: '<div class="readmore__button"><a href="#">Подробнее...</a></div>',
+					collapsedHeight: 150,
+				});
+			});
+		}
+
+		isResize = true;
+	}
+	if (windowWidth > 846 && isResize) {
+		if (document.querySelector('.readmore'))
+		{
+			$('.readmore').readmore('destroy');
+		}
+
+		isResize = false;
+	}
+}, false);
