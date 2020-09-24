@@ -203,3 +203,190 @@ window.addEventListener('resize', () => {
 		isResize = false;
 	}
 }, false);
+$('[data-portal]').each(function(){
+  let name = $(this).attr('data-popup');
+  $(this).html('<title>'+name+'</title>');
+})
+// map
+if (document.querySelector('#map')) {
+    var map = new Vue({
+        el: "#map",
+        data: {
+			regions: [
+				{
+					id: 548,
+					name: 'Якутск'
+				},
+				{
+					id: 113,
+					name: 'Абыйский'
+				},
+				{
+					id: 119,
+					name: 'Алданский'
+				},
+				{
+					id: 126,
+					name: 'Аллаиховский'
+				},
+				{
+					id: 132,
+					name: 'Амгинский'
+				},
+				{
+					id: 147,
+					name: 'Анабарский'
+				},
+				{
+					id: 150,
+					name: 'Булунский'
+				},
+				{
+					id: 158,
+					name: 'Верхневилюйский'
+				},
+				{
+					id: 180,
+					name: 'Верхнеколымский'
+				},
+				{
+					id: 187,
+					name: 'Верхоянский'
+				},
+				{
+					id: 203,
+					name: 'Вилюйский'
+				},
+				{
+					id: 225,
+					name: 'Горный'
+				},
+				{
+					id: 235,
+					name: 'Жиганский'
+				},
+				{
+					id: 240,
+					name: 'Кобяйский'
+				},
+				{
+					id: 253,
+					name: 'Ленский'
+				},
+				{
+					id: 265,
+					name: 'Мегино-Кангаласский'
+				},
+				{
+					id: 297,
+					name: 'Мирнинский'
+				},
+				{
+					id: 306,
+					name: 'Момский'
+				},
+				{
+					id: 313,
+					name: 'Намский'
+				},
+				{
+					id: 333,
+					name: 'Нерюнгринский'
+				},
+				{
+					id: 341,
+					name: 'Нижнеколымский'
+				},
+				{
+					id: 346,
+					name: 'Нюрбинский'
+				},
+				{
+					id: 366,
+					name: 'Оймяконский'
+				},
+				{
+					id: 398,
+					name: 'Оленекский'
+				},
+				{
+					id: 374,
+					name: 'Олекминский'
+				},
+				{
+					id: 403,
+					name: 'Среднеколымский'
+				},
+				{
+					id: 414,
+					name: 'Сунтарский'
+				},
+				{
+					id: 441,
+					name: 'Таттинский'
+				},
+				{
+					id: 456,
+					name: 'Томпонский'
+				},
+				{
+					id: 466,
+					name: 'Усть-Алданский'
+				},
+				{
+					id: 487,
+					name: 'Усть-Майский'
+				},
+				{
+					id: 498,
+					name: 'Усть-Янский'
+				},
+				{
+					id: 509,
+					name: 'Хангаласский'
+				},
+				{
+					id: 550,
+					name: 'Чурапчинский'
+				},
+				{
+					id: 544,
+					name: 'Эвено-Бытантайский'
+				}
+			],
+            isActive: 548,
+            percentage: 0,
+        },
+		mounted() {
+			document.querySelector('path[data-portal="548"]').classList.add('map-current');
+		},
+        methods: {
+			change: (id) => {
+				oldId = map.$data.isActive;
+				map.$data.isActive = id;
+				document.querySelector('path[data-portal="'+oldId+'"]').classList.remove('map-current');
+				document.querySelector('path[data-portal="'+id+'"]').classList.add('map-current');
+			},
+            onScroll: function(evt) {
+                let post = evt.target;
+                let st = post.scrollTop;
+                let sh = post.scrollHeight;
+                let ch = post.clientHeight;
+
+                let percent = Math.floor((st / (sh - ch)) * 100);
+                this.percentage = percent;
+            },
+            scrollByDown: function(e) {
+                var el = $("#map-select").scrollTop() + 300;
+                $("#map-select").animate({
+                    scrollTop: el
+                }, 300);
+            },
+            scrollByUp: function(e) {
+                var el = $("#map-select").scrollTop() - 300;
+                $("#map-select").animate({
+                    scrollTop: el
+                }, 300);
+            },
+        },
+    });}

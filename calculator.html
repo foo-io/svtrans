@@ -119,12 +119,11 @@
                                 <div class="calculator__shipping-location">
                                     <div class="calculator__shipping-item">
                                         <label for="calculatorFrom">Откуда</label>
-                                        <v-select :options="cities" id="calculatorFrom" placeholder="Якутск" :clearable="false"></v-select>
-                                        <!-- <input type="text" class="calculator__input" id="calculatorFrom" placeholder="Якутск"> -->
+                                        <v-select :options="cities" id="calculatorFrom" placeholder="Якутск" :clearable="false" v-model="calculatorFrom"></v-select>
                                     </div>
                                     <div class="calculator__shipping-item">
                                         <label for="calculatorWhere">Куда</label>
-                                        <v-select :options="cities" id="calculatorWhere" placeholder="Владивосток" :clearable="false"></v-select>
+                                        <v-select :options="cities" id="calculatorWhere" placeholder="Владивосток" :clearable="false" v-model="calculatorWhere"></v-select>
                                     </div>
                                 </div>
                                 <transition-group name="fade" tag="div">
@@ -151,7 +150,9 @@
                                     </div>
                                 </transition-group>
                                 <div class="calculator__shipping-add">
-                                    <button class="calculator__shipping-button" type="submit" v-on:click="addShippingElement">+ добавить еще одно место</button>
+                                    <div class="calculator__shipping-inner">
+                                        <button class="calculator__shipping-button" type="submit" v-on:click="addShippingElement">+ добавить еще одно место</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="calculator__deline"></div>
@@ -160,23 +161,22 @@
                             <div class="calculator__services">
                                 <div class="calculator__title">Дополнительные услуги</div>
                                 <div class="calculator__services-item">
-                                    <label for="calculatorInsurance">
-                                        Страхование
-                                    </label>
-                                    <input type="checkbox" id="calculatorInsurance" class="__checkbox" v-model="calculatorInsurance">
-                                    <label for="calculatorInsurance" class="calculator__checkbox"></label>
-                                    <money type="text" class="calculator__input __w256" id="calculatorInsuranceValue" placeholder="Объявленная стоимость, руб." decimal="." thousands=" " suffix=" руб." :precision="0" v-model="calculatorInsuranceValue"></money>
-                                </div>
-                                <div class="calculator__services-item">
-                                    <label for="calculatorDelivery">
+                                    <label for="calculatorDelivery" style="padding-right: 25px">
                                         Доставка и забор по городу Якутск
                                     </label>
                                     <input type="checkbox" id="calculatorDelivery" class="__checkbox" v-model="calculatorDelivery">
                                     <label for="calculatorDelivery" class="calculator__checkbox"></label>
                                     <div class="calculator__group">
-                                        <money type="text" class="calculator__input __w165 __margin-r-16" id="calculatorDeliveryWeightValue" placeholder="Вес посылки (кг.)" decimal="." thousands=" " suffix=" кг." :precision="0" v-model="calculatorDeliveryWeightValue"></money>
-                                        <money type="text" class="calculator__input __w165" id="calculatorDeliveryVolumeValue" placeholder="Объём (м3)" decimal="." thousands=" " suffix=" мЗ." :precision="0" v-model="calculatorDeliveryVolumeValue"></money>
+                                        <money type="text" class="calculator__input __w256" id="calculatorDeliveryWeightValue" placeholder="Вес посылки (кг.)" decimal="." thousands=" " suffix=" кг." :precision="0" v-model="calculatorDeliveryWeightValue"></money>
                                     </div>
+                                </div>
+                                <div class="calculator__services-item">
+                                    <label for="calculatorInsurance" style="padding-right: 25px">
+                                        Страхование
+                                    </label>
+                                    <input type="checkbox" id="calculatorInsurance" class="__checkbox" v-model="calculatorInsurance">
+                                    <label for="calculatorInsurance" class="calculator__checkbox"></label>
+                                    <money type="text" class="calculator__input __w256" id="calculatorInsuranceValue" placeholder="Объявленная стоимость, руб." decimal="." thousands=" " suffix=" руб." :precision="0" v-model="calculatorInsuranceValue"></money>
                                 </div>
                                 <div class="calculator__services-item">
                                     <label for="calculatorPacking">
@@ -231,6 +231,28 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- tester -->
+                            <pre>
+Город, откуда: {{calculatorFrom}}
+Город, куда: {{calculatorWhere}}
+
+<template v-for="(item, index) in shippingElements">
+Место {{index}}:
+{{item.weight}} кг
+{{item.length}} см
+{{item.width}} см
+{{item.height}} см
+</template>
+
+Доп. услуги:
+Страховка: {{calculatorInsurance}}
+Доставка: {{calculatorDelivery}}
+
+Результат:
+Сумма: {{calculatorResult}}
+Сроки: {{calculatorDate}}
+                            </pre>
                         </div>
                         <!-- ./calculator.html -->
 
@@ -395,34 +417,6 @@
                         height: ''
                     }
                 ],
-                // dopServices: {
-                //     units: {
-                //         roubles: {
-                //             decimal: '.',
-                //             thousands: ' ',
-                //             prefix: '',
-                //             suffix: ' руб.',
-                //             precision: 0,
-                //             masked: false
-                //         },
-                //         weight: {
-                //             decimal: '.',
-                //             thousands: ' ',
-                //             prefix: '',
-                //             suffix: ' кг.',
-                //             precision: 0,
-                //             masked: false
-                //         },
-                //         volume: {
-                //             decimal: '.',
-                //             thousands: ' ',
-                //             prefix: '',
-                //             suffix: ' м3.',
-                //             precision: 0,
-                //             masked: false
-                //         }
-                //     }
-                // },
                 calculatorInsurance: false,
                 calculatorInsuranceValue: '',
                 calculatorDelivery: false,
@@ -431,7 +425,8 @@
                 calculatorDeliveryVolumeValue: '',
                 calculatorResult: '12 000 руб.',
                 calculatorDate: '9-17 дней',
-                query: '',
+                calculatorFrom: '',
+                calculatorWhere: '',
                 cities: [
                     'Якутск',
                     'Владимир',
