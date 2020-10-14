@@ -1319,6 +1319,62 @@ table.contacts {
 
 .calculator {
 
+    &__airline {
+        &-image {
+            margin-bottom: 16px;
+
+            img {
+                max-height: 86px;
+                min-height: 86px;
+            }
+        }
+        &-title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #647C92;
+        }
+    }
+    &__airlines {
+        margin: 0 -8px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-block {
+            padding: 0 8px;
+            margin-bottom: 16px;
+            width: 25%;
+
+            &:nth-last-child(-n+4) {
+                margin-bottom: 0;
+            }
+        }
+        &-item {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px;
+            background: #FFFFFF;
+            border: 1px solid #D0DCE7;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &.active {
+                border: 1px solid #0EA6E7;
+
+                .calculator__airline-title {
+                    color: #0EA6E7;
+                }
+            }
+            &.disabled {
+                opacity: .5;
+            }
+        }
+    }
     &__price {
         background-color: $orange;
         border-radius: 4px;
@@ -1616,6 +1672,16 @@ table.contacts {
                     display: flex;
                     justify-content: space-between;
                 }
+            }
+        }
+        &-details {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            justify-content: space-between;
+
+            .calculator__link {
+                align-self: flex-end;
             }
         }
     }

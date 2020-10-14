@@ -1,0 +1,55 @@
+[{
+        "id": 1,
+        "airline": "YAK",
+        "cityFrom": "Якутск",
+        "cityTo": "Москва",
+        "unit": "кг",
+        "days": "10-17 дней",
+        "value": 149
+    },
+    {
+        "id": 2,
+        "airline": "YAK",
+        "cityFrom": "Якутск",
+        "cityTo": "Санкт - Петербург",
+        "unit": "кг",
+        "days": "12-18 дней",
+        "value": 137
+    },
+    {
+        "id": 3,
+        "airline": "YAK",
+        "cityFrom": "Якутск",
+        "cityTo": "Новосибирск",
+        "unit": "кг",
+        "days": "7-14 дней",
+        "value": 93
+    },
+    {
+        "id": 4,
+        "airline": "SEV",
+        "cityFrom": "Якутск",
+        "cityTo": "Новосибирск",
+        "unit": "кг",
+        "days": "5-7 дней",
+        "value": 90
+    },
+    {
+        "id": 5,
+        "airline": "POL",
+        "cityFrom": "Нерюнгри",
+        "cityTo": "Москва",
+        "unit": "кг",
+        "days": "14-21 дней",
+        "value": 150
+    },
+    {
+        "id": 6,
+        "airline": "AER",
+        "cityFrom": "Якутск",
+        "cityTo": "Новосибирск",
+        "unit": "кг",
+        "days": "3-7 дней",
+        "value": 95
+    }
+]

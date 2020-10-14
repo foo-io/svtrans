@@ -15,6 +15,27 @@
 </head>
 
 <body>
+
+    <div class="container">
+        <a href="index.html">Главная страница</a> /
+        <a href="about.html">О компании</a> /
+        <a href="buy_ticket.html">Купить билет</a> /
+        <a href="calculator.html">Калькулятор</a> /
+        <a href="cargo_calc-avia.html">Калькулятор авиа</a> /
+        <a href="cargo_calc-car.html">Калькулятор авто</a> /
+        <a href="cargo_calc-river.html">Калькулятор речной</a> /
+        <a href="cargo_tariff.html">Тарифы</a> /
+        <a href="cargo.html">Грузоперевозки</a> /
+        <a href="charter.html">Заказ чартера</a> /
+        <a href="contacts_office.html">Офис</a> /
+        <a href="contacts_tickets.html">Авиакассы</a> /
+        <a href="documents.html">Документы</a> /
+        <a href="news.html">Новости</a> /
+        <a href="news_detailed.html">Новости детальное</a> /
+        <a href="search.html">Поиск</a> /
+        <a href="static.html">Статичная страница</a>
+    </div>
+
     <div class="body" id="app">
         <div class="header">
             <div class="header_top">
@@ -22,7 +43,7 @@
                     <div class="header_top__inner">
                         <div class="header_top_left">
                             <div class="header_top__logo">
-                                <a href="#">
+                                <a href="./index.html">
                                     <img src="./img/logo.svg" alt="СВ Транс">
                                 </a>
                             </div>
@@ -44,10 +65,16 @@
                                     </span>
                                 </a>
                             </div>
-                            <div class="header_top__search">
-                                <a href="#" class="top_search svg-hover">
+                            <div class="header__top-search">
+                                <a href="./search.html" class="top_search svg-hover">
                                     <img src="./img/search.svg" alt="">
                                 </a>
+                            </div>
+                            <div class="header__top-burger">
+                                <button type="button" data-toggle="mobile-menu">
+                                    <img src="./img/burger.svg" alt="" class="mobile-menu__burger-open">
+                                    <img src="./img/menu-close.svg" alt="" class="mobile-menu__burger-close">
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -58,26 +85,83 @@
                     <div class="header_bottom__inner">
                         <div class="header_bottom__menu">
                             <ul class="dropdown menu" data-dropdown-menu>
-                                <li><a href="#">Купить билет</a></li>
-                                <li><a href="#">Грузовые перевозки</a></li>
+                                <li><a href="./buy_ticket.html">Купить билет</a></li>
+                                <li><a href="./cargo.html">Грузовые перевозки</a></li>
                                 <li>
                                     <a href="#">Документы и справка</a>
                                     <ul class="menu">
-                                        <li><a href="#">Документы</a></li>
-                                        <li><a href="#">справка</a></li>
+                                        <li><a href="./documents.html">Автоперевозки</a></li>
+                                        <li><a href="./documents.html">Авиаперевозки</a></li>
+                                        <li><a href="./documents.html">Речные перевозки</a></li>
+                                        <li><a href="./documents.html">Для покупателей</a></li>
+                                        <li><a href="./documents.html">Для бизнеса</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">О компании</a></li>
+                                <li><a href="./about.html">О компании</a></li>
                                 <li>
                                     <a href="#">Контакты</a>
                                     <ul class="menu">
-                                        <li><a href="#">Документы</a></li>
-                                        <li><a href="#">справка</a></li>
+                                        <li><a href="./contacts_office.html">Офис</a></li>
+                                        <li><a href="#">Склад</a></li>
+                                        <li><a href="./contacts_tickets.html">Авиакассы</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Новости</a></li>
-                                <li><a href="#">Спецпредложения</a></li>
+                                <li class="md-hidden"><a href="./news.html">Новости</a></li>
+                                <li class="md-hidden"><a href="#">Спецпредложения</a></li>
+                                <li class="lg-hidden md-visible">
+                                    <a href="#">Ещё</a>
+                                    <ul class="menu">
+                                        <li><a href="./news.html">Новости</a></li>
+                                        <li><a href="#">Спецпредложения</a></li>
+                                    </ul>
+                                </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-pane mobile-menu" id="mobile-menu" data-dropdown data-auto-focus="true">
+                <ul class="vertical menu accordion-menu mobile-menu__accordion" data-accordion-menu>
+                    <li><a href="./buy_ticket.html">Купить билет</a></li>
+                    <li><a href="./cargo.html">Грузовые перевозки</a></li>
+                    <li>
+                        <a href="#">Документы и справка</a>
+                        <ul class="menu vertical mobile-menu__submenu">
+                            <li><a href="./documents.html">Автоперевозки</a></li>
+                            <li><a href="./documents.html">Авиаперевозки</a></li>
+                            <li><a href="./documents.html">Речные перевозки</a></li>
+                            <li><a href="./documents.html">Для покупателей</a></li>
+                            <li><a href="./documents.html">Для бизнеса</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./news.html">Новости</a></li>
+                    <li><a href="#">Спецпредложения</a></li>
+                </ul>
+                <div class="mobile-menu__contact">
+                    <div class="mobile-menu__contact-item">
+                        <div class="mobile-menu__contact-icon">
+                            <img src="./img/phone.svg" alt="">
+                        </div>
+                        <div class="mobile-menu__contact-text">
+                            Пассажирские перевозки:<br>
+                            <span>(4112) 402-409</span>
+                        </div>
+                    </div>
+                    <div class="mobile-menu__contact-item">
+                        <div class="mobile-menu__contact-icon">
+                            <img src="./img/phone.svg" alt="">
+                        </div>
+                        <div class="mobile-menu__contact-text">
+                            Грузовые перевозки:<br>
+                            <span>(4112) 204-420</span>
+                        </div>
+                    </div>
+                    <div class="mobile-menu__contact-item">
+                        <div class="mobile-menu__contact-icon">
+                            <img src="./img/mail.svg" alt="">
+                        </div>
+                        <div class="mobile-menu__contact-text">
+                            <a href="#">svtranssakha@mail.ru</a>
                         </div>
                     </div>
                 </div>
@@ -119,11 +203,11 @@
                                 <div class="calculator__shipping-location">
                                     <div class="calculator__shipping-item">
                                         <label for="calculatorFrom">Откуда</label>
-                                        <v-select :options="cities" id="calculatorFrom" placeholder="Якутск" :clearable="false" v-model="calculatorFrom"></v-select>
+                                        <v-select :options="citiesFrom" id="calculatorFrom" placeholder="Якутск" :clearable="false" v-model="calculatorFrom"></v-select>
                                     </div>
                                     <div class="calculator__shipping-item">
                                         <label for="calculatorWhere">Куда</label>
-                                        <v-select :options="cities" id="calculatorWhere" placeholder="Владивосток" :clearable="false" v-model="calculatorWhere"></v-select>
+                                        <v-select :options="citiesTo" id="calculatorWhere" placeholder="Владивосток" :clearable="false" v-model="calculatorWhere"></v-select>
                                     </div>
                                 </div>
                                 <transition-group name="fade" tag="div">
@@ -155,6 +239,23 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="calculator__deline"></div>
+
+                            <!-- selectAirlines -->
+                            <div class="calculator__airlines">
+                                <div class="calculator__airlines-block" v-for="item in airlineAll" :style="item.status == 'disabled' ? 'order: 1' : ''">
+                                    <div class="calculator__airlines-item" :class="{'active': item.code == selectedAirline, 'disabled': item.status == 'disabled'}" @click="item.status != 'disabled' ? selectedAirline = item.code : ''">
+                                        <div class="calculator__airline-image">
+                                            <img :src="item.image" alt="">
+                                        </div>
+                                        <div class="calculator__airline-title">
+                                            {{item.name}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="calculator__deline"></div>
 
                             <!-- services -->
@@ -166,8 +267,9 @@
                                     </label>
                                     <input type="checkbox" id="calculatorDelivery" class="__checkbox" v-model="calculatorDelivery">
                                     <label for="calculatorDelivery" class="calculator__checkbox"></label>
-                                    <div class="calculator__group">
+                                    <div class="calculator__services-details">
                                         <money type="text" class="calculator__input __w256" id="calculatorDeliveryWeightValue" placeholder="Вес посылки (кг.)" decimal="." thousands=" " suffix=" кг." :precision="0" v-model="calculatorDeliveryWeightValue"></money>
+                                        <a href="#" class="calculator__link svg-hover">Подробнее <img src="./img/slider-right.svg" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="calculator__services-item">
@@ -176,7 +278,10 @@
                                     </label>
                                     <input type="checkbox" id="calculatorInsurance" class="__checkbox" v-model="calculatorInsurance">
                                     <label for="calculatorInsurance" class="calculator__checkbox"></label>
-                                    <money type="text" class="calculator__input __w256" id="calculatorInsuranceValue" placeholder="Объявленная стоимость, руб." decimal="." thousands=" " suffix=" руб." :precision="0" v-model="calculatorInsuranceValue"></money>
+                                    <div class="calculator__services-details">
+                                        <money type="text" class="calculator__input __w256" id="calculatorInsuranceValue" placeholder="Объявленная стоимость, руб." decimal="." thousands=" " suffix=" руб." :precision="0" v-model="calculatorInsuranceValue"></money>
+                                        <a href="#" class="calculator__link svg-hover">Подробнее <img src="./img/slider-right.svg" alt=""></a>
+                                    </div>
                                 </div>
                                 <div class="calculator__services-item">
                                     <label for="calculatorPacking">
@@ -190,12 +295,35 @@
 
                             <!-- results -->
                             <div class="calculator__results">
+
+                                <pre>
+ИСХОДНАЯ ФОРМУЛА:
+
+---
+(ЯКУТИЯ):
+1. L*W*H = V*167 = ВКО
+1.1. min=10
+2. Берем наибольшее из ВКО / KG / min = РВ
+3. РВ*Т=ОС
+
+---
+*Т - тариф
+*ОС - ориентировочная стоимость
+*РВ - расчетный вес
+*min - минимальный вес
+*V - объем
+*L - длина
+*W - ширина
+*H - высота
+*KG - введенный вес
+*ВКО - вес к оплате
+                                </pre>
                                 <div class="calculator__title">Ориентировочная стоимость перевозки:</div>
                                 <div class="calculator__results-content">
                                     <div class="calculator__results-item">
                                         <div class="calculator__price">
                                             <div class="calculator__price-summ">
-                                                {{calculatorResult}}
+                                                {{calculatorResult}} руб.
                                             </div>
                                             <div class="calculator__price-time">
                                                 {{calculatorDate}}
@@ -234,24 +362,9 @@
 
                             <!-- tester -->
                             <pre>
-Город, откуда: {{calculatorFrom}}
-Город, куда: {{calculatorWhere}}
-
-<template v-for="(item, index) in shippingElements">
-Место {{index}}:
-{{item.weight}} кг
-{{item.length}} см
-{{item.width}} см
-{{item.height}} см
-</template>
-
-Доп. услуги:
-Страховка: {{calculatorInsurance}}
-Доставка: {{calculatorDelivery}}
-
-Результат:
-Сумма: {{calculatorResult}}
-Сроки: {{calculatorDate}}
+{{currentPrice}}
+---
+{{jsonData}}
                             </pre>
                         </div>
                         <!-- ./calculator.html -->
@@ -285,69 +398,128 @@
         </div>
         <div class="footer">
             <div class="container">
-                <div class="footer_inner">
+                <div class="footer_inner sm-hidden">
                     <div class="footer_info footer__block">
                         <div class="footer_logo">
                             <img src="./img/footer_logo.svg" alt="">
                         </div>
-                        <span class="footer_info__text">Есть вопросы?</span>
-                        <div class="footer_mailto">
-                            <div class="footer_mailto__text">
-                                <input class="input__text input__text-black" type="text" name="" value="" placeholder="Ваш телефон">
+                        <div class="footer__sub" data-da="footer_inner,last,1136">
+                            <div class="footer__sub-title">
+                                Есть вопросы?
                             </div>
-                            <div class="footer_mailto__button">
-                                <input class="input__submit btn" type="submit" name="" value="Отправить">
-                            </div>
-                        </div>
-                        <div class="footer_mailto-info">
-                            <span>Нажимая на кнопку вы соглашаетесь с <a href="#" class="blue">политикой конфиденциальности</a></span>
+                            <form class="footer__sub-group">
+                                <input type="text" class="footer__sub-input" placeholder="Ваш телефон">
+                                <button type="submit" class="footer__sub-submit">Отправить</button>
+                            </form>
+                            <div class="footer__sub-privacy">Нажимая на кнопку вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
                         </div>
                     </div>
                     <div class="footer_menu footer__block">
                         <ul class="dropdown menu" data-dropdown-menu>
-                            <li><a href="">Купить билет</a></li>
-                            <li><a href="">Грузовые перевозки</a></li>
+                            <li><a href="./buy_ticket.html">Купить билет</a></li>
+                            <li><a href="./cargo.html">Грузовые перевозки</a></li>
                             <li>
                                 <a href="#">Документы и справка</a>
                                 <ul class="menu">
-                                    <li><a href="#">Документы</a></li>
-                                    <li><a href="#">справка</a></li>
+                                    <li><a href="./documents.html">Автоперевозки</a></li>
+                                    <li><a href="./documents.html">Авиаперевозки</a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#">О компании</a>
-                                <ul class="menu">
-                                    <li><a href="#">О компании</a></li>
-                                    <li><a href="#">Контакты</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="./about.html">О компании</a></li>
                             <li>
                                 <a href="#">Контакты</a>
                                 <ul class="menu">
-                                    <li><a href="#">О компании</a></li>
-                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="./contacts_office.html">Офис</a></li>
+                                    <li><a href="#">Склад</a></li>
+                                    <li><a href="./contacts_tickets.html">Авиакассы</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Новости</a></li>
-                            <li><a href="">Спецпредложения</a></li>
+                            <li class="md-hidden"><a href="./news.html">Новости</a></li>
+                            <li class="md-hidden"><a href="#">Спецпредложения</a></li>
+                            <li class="lg-hidden md-visible">
+                                <a href="#">Ещё</a>
+                                <ul class="menu">
+                                    <li><a href="./news.html">Новости</a></li>
+                                    <li><a href="#">Спецпредложения</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
-                    <div class="footer_contact footer__block">
+                    <div class="footer_contact footer__block" data-da="footer_info,last,1136">
                         <div class="footer_contact__content">
                             <ul>
-                                <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Пассажирские перевозки: <b>(4112) 402-409</b></li>
-                                <li><img src="./img/phone.svg" alt="" class="icon__margin-right"> Грузовые перевозки: <b>(4112) 204-420</b></li>
+                                <li><img src="./img/phone.svg" alt="" class="icon__margin-right"><b style="margin-right: 10px;">(4112) 402-409</b> Пассажирские перевозки</li>
+                                <li><img src="./img/phone.svg" alt="" class="icon__margin-right"><b style="margin-right: 10px;">(4112) 204-420</b> Грузовые перевозки</li>
                                 <li><img src="./img/mail.svg" alt="" class="icon__margin-right"> <a href="mailto:svtranssakha@mail.ru">svtranssakha@mail.ru</a></li>
                             </ul>
                         </div>
                         <div class="footer_visa">
                             <ul>
-                                <li><img src="./img/visa_1.svg" alt=""></li>
-                                <li><img src="./img/visa_2.svg" alt=""></li>
-                                <li><img src="./img/visa_3.svg" alt=""></li>
-                                <li><img src="./img/visa_4.svg" alt=""></li>
+                                <li><img src="./img/payment-1.png" alt=""></li>
+                                <li><img src="./img/payment-2.png" alt=""></li>
+                                <li><img src="./img/payment-3.png" alt=""></li>
+                                <li><img src="./img/payment-4.png" alt=""></li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+                <div class="footer__mobile sm-visible">
+                    <div class="footer__mobile-logo">
+                        <img src="./img/footer_logo.svg" alt="">
+                    </div>
+                    <ul class="vertical menu accordion-menu mobile-menu__accordion" data-accordion-menu>
+                        <li><a href="#">Купить билет</a></li>
+                        <li><a href="#">Грузовые перевозки</a></li>
+                        <li>
+                            <a href="#">Документы и справка</a>
+                            <ul class="menu vertical mobile-menu__submenu">
+                                <li><a href="#">Автоперевозки</a></li>
+                                <li><a href="#">Авиаперевозки</a></li>
+                                <li><a href="#">Речные перевозки</a></li>
+                                <li><a href="#">Для покупателей авиабилетов</a></li>
+                                <li><a href="#">Для бизнеса</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Спецпредложения</a></li>
+                    </ul>
+                    <div class="mobile-menu__contact">
+                        <div class="mobile-menu__contact-item">
+                            <div class="mobile-menu__contact-icon">
+                                <img src="./img/phone.svg" alt="">
+                            </div>
+                            <div class="mobile-menu__contact-text">
+                                <span>(4112) 402-409</span><br>
+                                Пассажирские перевозки
+                            </div>
+                        </div>
+                        <div class="mobile-menu__contact-item">
+                            <div class="mobile-menu__contact-icon">
+                                <img src="./img/phone.svg" alt="">
+                            </div>
+                            <div class="mobile-menu__contact-text">
+                                <span>(4112) 204-420</span><br>
+                                Грузовые перевозки
+                            </div>
+                        </div>
+                        <div class="mobile-menu__contact-item">
+                            <div class="mobile-menu__contact-icon">
+                                <img src="./img/mail.svg" alt="">
+                            </div>
+                            <div class="mobile-menu__contact-text">
+                                <a href="#">svtranssakha@mail.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__sub">
+                        <div class="footer__sub-title">
+                            Есть вопросы?
+                        </div>
+                        <form class="footer__sub-group">
+                            <input type="text" class="footer__sub-input" placeholder="Ваш телефон">
+                            <button type="submit" class="footer__sub-submit">Отправить</button>
+                        </form>
+                        <div class="footer__sub-privacy">Нажимая на кнопку вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
                     </div>
                 </div>
             </div>
@@ -359,134 +531,8 @@
     <script src="dist/foundation/js/vendor/jquery.js"></script>
     <!-- <script src="dist/vanilla-mask.js"></script> -->
     <script src="dist/v-money.js"></script>
-
-    <script>
-        Vue.component('v-select', VueSelect.VueSelect);
-
-        const calculator = new Vue({
-            el: '#calc',
-            data: {
-                shipping: {
-                    labels: {
-                        weight: 'Вес',
-                        length: 'Длина',
-                        width: 'Ширина',
-                        height: 'Высота'
-                    },
-                    units: {
-                        weight: {
-                            decimal: '.',
-                            thousands: ' ',
-                            prefix: '',
-                            suffix: ' кг.',
-                            precision: 0,
-                            masked: false
-                        },
-                        length: {
-                            decimal: '.',
-                            thousands: ' ',
-                            prefix: '',
-                            suffix: ' см.',
-                            precision: 0,
-                            masked: false
-                        },
-                        width: {
-                            decimal: '.',
-                            thousands: ' ',
-                            prefix: '',
-                            suffix: ' см.',
-                            precision: 0,
-                            masked: false
-                        },
-                        height: {
-                            decimal: '.',
-                            thousands: ' ',
-                            prefix: '',
-                            suffix: ' см.',
-                            precision: 0,
-                            masked: false
-                        }
-                    }
-                },
-                shippingElements: [
-                    {
-                        id: Math.random(),
-                        weight: '',
-                        length: '',
-                        width: '',
-                        height: ''
-                    }
-                ],
-                calculatorInsurance: false,
-                calculatorInsuranceValue: '',
-                calculatorDelivery: false,
-                calculatorDeliveryValue: '',
-                calculatorDeliveryWeightValue: '',
-                calculatorDeliveryVolumeValue: '',
-                calculatorResult: '12 000 руб.',
-                calculatorDate: '9-17 дней',
-                calculatorFrom: '',
-                calculatorWhere: '',
-                cities: [
-                    'Якутск',
-                    'Владимир',
-                    'Москва',
-            		'Санкт-Петербург'
-                ],
-            },
-            methods: {
-                addShippingElement: function ()
-                {
-                    this.shippingElements.push({
-                        id: Math.random(),
-                        weight: '',
-                        length: '',
-                        width: '',
-                        height: ''
-                    })
-                },
-                delShippingElement: function (index)
-                {
-                    this.shippingElements.splice(index, 1);
-                }
-            },
-            watch: {
-                calculatorInsuranceValue: function ()
-                {
-                    if (this.calculatorInsuranceValue > 0)
-                    {
-                        this.calculatorInsurance = true;
-                    }
-                    else
-                    {
-                        this.calculatorInsurance = false;
-                    }
-                },
-                calculatorDeliveryVolumeValue: function ()
-                {
-                    if (this.calculatorDeliveryWeightValue > 0 && this.calculatorDeliveryVolumeValue > 0)
-                    {
-                        this.calculatorDelivery = true;
-                    }
-                    else
-                    {
-                        this.calculatorDelivery = false;
-                    }
-                },
-                calculatorDeliveryWeightValue: function ()
-                {
-                    if (this.calculatorDeliveryWeightValue > 0 && this.calculatorDeliveryVolumeValue > 0)
-                    {
-                        this.calculatorDelivery = true;
-                    }
-                    else
-                    {
-                        this.calculatorDelivery = false;
-                    }
-                },
-            }
-        });
-    </script>
+    <script src="dist/axios.min.js"></script>
+    <script src="dist/calculator.js" charset="utf-8"></script>
     <script src="dist/foundation/js/vendor/foundation.min.js"></script>
     <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f4f1856c7464b98"></script> -->
     <script>
