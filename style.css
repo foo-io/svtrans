@@ -112,6 +112,8 @@ a:hover {
     -o-transition: all .3s ease;
     transition: all .3s ease;
 	z-index: 9;
+
+    min-height: 210px;
 }
 .background-item:hover .background-image {
 	-webkit-transform: scale(1.05);
@@ -346,6 +348,7 @@ a:hover {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
+	cursor: pointer;
 }
 .top_search:hover svg path {
 	fill: #F57C00;
@@ -676,6 +679,7 @@ a:hover {
 }
 /* news */
 .news_content {
+	/* min-height: 440px; */
 	height: 440px;
 	color: #fff;
 }

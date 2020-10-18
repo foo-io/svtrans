@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="dist/fonts/stylesheet.css">
     <link rel="stylesheet" href="dist/foundation/css/foundation.css">
     <link rel="stylesheet" href="dist/slick/slick.css" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="style.css?v10">
+    <link rel="stylesheet" href="./styles.min.css?v10">
 </head>
 
 <body>
@@ -65,9 +65,18 @@
                                 </a>
                             </div>
                             <div class="header__top-search">
-                                <a href="./search.html" class="top_search svg-hover">
+                                <button class="top_search svg-hover" data-open="search-modal">
                                     <img src="./img/search.svg" alt="">
-                                </a>
+                                </button>
+                                <div class="reveal search-modal" id="search-modal" data-reveal>
+                                    <form action="search.html" method="get">
+                                        <input type="text" name="" value="" class="search-modal__input" placeholder="Что Вы хотите найти?">
+                                        <button class="svg-hover">
+                                            Искать
+                                            <img src="./img/search.svg" alt="">
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                             <div class="header__top-burger">
                                 <button type="button" data-toggle="mobile-menu">
@@ -911,7 +920,7 @@
                 <div class="container">
                     <div class="section_title">
                         <h1>Специальные предложения</h1>
-                        <a href="#" class="title_url svg-hover">
+                        <a href="./news.html" class="title_url svg-hover">
                             <span class="sm-hidden">Все спецпредложения</span>
                             <span class="sm-visible">Все</span>
                             <img src="./img/arrow-right.svg" alt="" style="margin-left: 4px;">
@@ -919,7 +928,7 @@
                     </div>
                     <div class="row">
                         <div class="lg-3 sm-12 block">
-                            <a href="#" class="section_content background-item">
+                            <a href="./news_detailed.html" class="section_content background-item">
                                 <div class="background-image" style="background-image:url(img/special_1.png)"></div>
                                 <span class="special_city img_title">Сеул</span>
                                 <span class="special_city_out img_title-small">из Якутска</span>
@@ -927,7 +936,7 @@
                             </a>
                         </div>
                         <div class="lg-3 sm-12 block">
-                            <a href="#" class="section_content background-item">
+                            <a href="./news_detailed.html" class="section_content background-item">
                                 <div class="background-image" style="background-image:url(img/special_2.png)"></div>
                                 <span class="special_city img_title">Москва</span>
                                 <span class="special_city_out img_title-small">из Якутска</span>
@@ -935,7 +944,7 @@
                             </a>
                         </div>
                         <div class="lg-3 sm-12 block">
-                            <a href="#" class="section_content background-item">
+                            <a href="./news_detailed.html" class="section_content background-item">
                                 <div class="background-image" style="background-image:url(img/special_3.png)"></div>
                                 <span class="special_city img_title">Тбилиси</span>
                                 <span class="special_city_out img_title-small">из Якутска</span>
@@ -950,7 +959,7 @@
                 <div class="container">
                     <div class="section_title">
                         <h1>Новости компании</h1>
-                        <a href="#" class="title_url svg-hover">
+                        <a href="./news.html" class="title_url svg-hover">
                             <span class="sm-hidden">Все новости</span>
                             <span class="sm-visible">Все</span>
                             <img src="./img/arrow-right.svg" alt="" style="margin-left: 4px;">
@@ -958,7 +967,7 @@
                     </div>
                     <div class="row">
                         <div class="lg-2 sm-12 block">
-                            <a href="#" class="news_content background-item">
+                            <a href="./news_detailed.html" class="news_content background-item">
                                 <div class="news-meta">
                                     <div class="news-meta__item">
                                         <img src="./img/photo.svg" alt="">
@@ -975,7 +984,7 @@
                             </a>
                         </div>
                         <div class="lg-3 sm-12 block">
-                            <a href="#" class="news_content background-item">
+                            <a href="./news_detailed.html" class="news_content background-item">
                                 <div class="news-meta">
                                     <div class="news-meta__item">
                                         <img src="./img/photo.svg" alt="">
@@ -993,7 +1002,7 @@
                             </a>
                         </div>
                         <div class="lg-3 md-6 sm-12 block">
-                            <a href="#" class="news_content-2 background-item">
+                            <a href="./news_detailed.html" class="news_content-2 background-item">
                                 <div class="news-meta">
                                     <div class="news-meta__item">
                                         <img src="./img/photo.svg" alt="">
@@ -1012,7 +1021,7 @@
                         <div class="lg-2 md-6 sm-12 block">
                             <div class="row mini_news-inner">
                                 <div class="col-12 block">
-                                    <a href="#" class="news_content-small background-item">
+                                    <a href="./news_detailed.html" class="news_content-small background-item">
                                         <div class="news-meta">
                                             <div class="news-meta__item">
                                                 <img src="./img/photo.svg" alt="">
@@ -1028,7 +1037,7 @@
                                     </a>
                                 </div>
                                 <div class="col-6 block">
-                                    <a href="#" class="news_content-smaller background-item">
+                                    <a href="./news_detailed.html" class="news_content-smaller background-item">
                                         <div class="news_content-smaller__img">
                                             <div class="background-image" style="background-image:url(img/news_5.png)"></div>
                                         </div>
@@ -1039,7 +1048,7 @@
                                     </a>
                                 </div>
                                 <div class="col-6 block">
-                                    <a href="#" class="news_content-smaller background-item">
+                                    <a href="./news_detailed.html" class="news_content-smaller background-item">
                                         <div class="news_content-smaller__img">
                                             <div class="background-image" style="background-image:url(img/news_6.png)"></div>
                                         </div>

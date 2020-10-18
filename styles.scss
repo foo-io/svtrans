@@ -13,11 +13,57 @@ $black: #1F2C58;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
         border-radius: 8px;
 
+        &-main {
+            @media screen and (max-width: 600px) {
+                padding: 16px;
+            }
+        }
     }
     &_top {
         background: rgba(245, 124, 0, 0.8);
         border-radius: 8px 8px 0 0;
-        padding: 0 32px 0 32px;
+        padding: 0 32px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        overflow-x: auto;
+
+        & .tabs-title {
+            &>a {
+                white-space: nowrap;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            padding: 0 16px;
+
+            & .tabs-title {
+                &>a {
+                    padding: 15px 0 12px;
+                }
+            }
+
+        }
+    }
+    &_bottom {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        overflow-x: auto;
+
+        & .tabs-title {
+            &>a {
+                white-space: nowrap;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            padding: 0 16px;
+            & .tabs-title {
+                &>a {
+                    padding: 15px 0 12px;
+                }
+            }
+        }
 
     }
 }
@@ -1326,6 +1372,7 @@ table.contacts {
             img {
                 max-height: 86px;
                 min-height: 86px;
+                object-fit: contain;
             }
         }
         &-title {
@@ -1333,6 +1380,7 @@ table.contacts {
             font-size: 18px;
             line-height: 21px;
             color: #647C92;
+            text-align: center;
         }
     }
     &__airlines {
@@ -1349,6 +1397,24 @@ table.contacts {
 
             &:nth-last-child(-n+4) {
                 margin-bottom: 0;
+            }
+
+            @media screen and (max-width: 1136px) {
+                width: 33.333%;
+
+                &:nth-last-child(-n+4) {
+                    margin-bottom: 16px;
+                }
+
+            }
+
+            @media screen and (max-width: 846px) {
+                width: 50%;
+
+                &:nth-last-child(-n+4) {
+                    margin-bottom: 16px;
+                }
+
             }
         }
         &-item {
@@ -1372,6 +1438,10 @@ table.contacts {
             }
             &.disabled {
                 opacity: .5;
+            }
+
+            @media screen and (max-width: 846px) {
+                height: 100%;
             }
         }
     }
@@ -1755,6 +1825,11 @@ table.contacts {
             display: -ms-flex;
             display: flex;
             flex-direction: column;
+
+            @media screen and (max-width: 600px) {
+                width: 50%;
+                margin-bottom: 16px;
+            }
         }
         &-text {
             font-weight: 500;
@@ -1765,8 +1840,16 @@ table.contacts {
             &.__grey {
                 color: $cntColorGrey;
 
+                @media screen and (max-width: 600px) {
+                    white-space: nowrap;
+                }
             }
         }
+
+        @media screen and (max-width: 600px) {
+            flex-wrap: wrap;
+        }
+
     }
     &__bottom {
         display: -webkit-flex;
@@ -1811,6 +1894,10 @@ table.contacts {
             svg path {
                 fill: $btnSvg;
             }
+        }
+
+        @media screen and (max-width: 600px) {
+            max-width: none;
         }
     }
     &__radios {
@@ -1861,6 +1948,11 @@ table.contacts {
             line-height: 22px;
             color: #FFF;
         }
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 16px;
+        }
+
     }
     &__selectors {
         display: -webkit-flex;
@@ -1873,11 +1965,22 @@ table.contacts {
             border-left: 1px solid $delineColor;
             margin: 0 24px;
             height: 24px;
+
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
         }
     }
     &__deline {
         border-top: 1px solid #3DB7EB;
         margin: 32px 0;
+
+        @media screen and (max-width: 600px) {
+            margin: 16px 0;
+        }
     }
     &__group {
         position: relative;
@@ -2055,6 +2158,11 @@ table.contacts {
 
             &.__calc-from {
                 flex-grow: 1;
+
+                @media screen and (max-width: 600px) {
+                    width: 50%;
+                    margin-bottom: 16px;
+                }
             }
             &.__calc-date {
                 max-width: 142px;
@@ -2062,6 +2170,10 @@ table.contacts {
                 .calc-content__input {
                     font-size: 14px;
                     line-height: 20px;
+                }
+
+                @media screen and (max-width: 600px) {
+                    width: 50%;
                 }
             }
             &.__calc-arrow {
@@ -2074,11 +2186,73 @@ table.contacts {
                 svg path {
                     fill: $arrowColor;
                 }
+                @media screen and (max-width: 600px) {
+                    display: none;
+                }
             }
             &.__calc-where {
                 flex-grow: 3;
+
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                }
             }
 
+        }
+
+        @media screen and (max-width: 600px) {
+            flex-wrap: wrap;
+        }
+
+    }
+}
+
+.search-modal {
+    outline: none;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 0;
+    padding: 36px 32px;
+    width: 100%;
+
+    &__input {
+        border: 0;
+        border-bottom: 3px solid #0EA6E7;
+        outline: none;
+        padding: 16px 120px 16px 0;
+
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 26px;
+        color: #647C92;
+
+        width: 100%;
+    }
+    form {
+        position: relative;
+    }
+    button {
+        position: absolute;
+        right: 0;
+        top: calc( 50% - 16px );
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 32px;
+        align-items: center;
+        color: #0EA6E7;
+
+        cursor: pointer;
+
+        img, svg {
+            margin-left: 16px;
+        }
+        &:hover {
+            color: $orange;
         }
     }
 }
@@ -2790,7 +2964,7 @@ ul.accordion {
                     display: block;
                 }
                 .background-image {
-                    position: unset;
+                    position: relative;
                     margin-bottom: 16px;
                 }
                 .news_content__inner {
@@ -2806,6 +2980,7 @@ ul.accordion {
                 .news_content {
                     border: 1px solid #DBE0EB;
                     border-radius: 4px;
+                    height: auto;
                 }
             }
         }

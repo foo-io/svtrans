@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./dist/slick/slick.css" />
     <link rel="stylesheet" href="./dist/vue-select.css" />
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styles.min.css">
+    <link rel="stylesheet" href="./styles.min.css?v2">
 </head>
 
 <body>
@@ -214,7 +214,7 @@
                                     <div class="calculator__shipping-element" v-for="(item, index) in shippingElements" v-bind:key="item.id">
                                         <div class="calculator__shipping-item">
                                             <label for="calculatorWeight">{{shipping.labels.weight}}</label>
-                                            <money type="text" class="calculator__input" :id="'calculatorWeight['+index+']'" placeholder="0 кг." v-model="shippingElements[index].weight" v-bind="shipping.units.weight"></money>
+                                            <money type="text" class="calculator__input" :id="'calculatorWeight['+index+']'" placeholder="0 кг." v-model="shippingElements[index].weight" v-bind="shipping.units.weight" @change="calculation"></money>
                                         </div>
                                         <div class="calculator__shipping-item">
                                             <label for="calculatorLength">{{shipping.labels.length}}</label>
@@ -296,7 +296,7 @@
                             <!-- results -->
                             <div class="calculator__results">
 
-                                <pre>
+                                <!-- <pre>
 ИСХОДНАЯ ФОРМУЛА:
 
 ---
@@ -317,7 +317,7 @@
 *H - высота
 *KG - введенный вес
 *ВКО - вес к оплате
-                                </pre>
+                                </pre> -->
                                 <div class="calculator__title">Ориентировочная стоимость перевозки:</div>
                                 <div class="calculator__results-content">
                                     <div class="calculator__results-item">
@@ -361,11 +361,11 @@
                             </div>
 
                             <!-- tester -->
-                            <pre>
+                            <!-- <pre>
 {{currentPrice}}
 ---
 {{jsonData}}
-                            </pre>
+                            </pre> -->
                         </div>
                         <!-- ./calculator.html -->
 

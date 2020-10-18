@@ -220,7 +220,8 @@ const calculator = new Vue({
             let cW = this.shippingElements[0].width / 100;
             let cH = this.shippingElements[0].height / 100;
             let cT = this.currentPrice;
-            let min = 10; // НАДО ДОБАВИТЬ ПАРАМЕТР
+            let min = this.getMinWeight(); // НАДО ДОБАВИТЬ ПАРАМЕТР
+            let gan = 1300; // налог?
 
             let getVKO = () => cL*cW*cH*167;
             let getRV = () => {
@@ -228,10 +229,23 @@ const calculator = new Vue({
 
                 return Math.max(...maxArr);
             }
-            let getOS = () => getRV()*cT;
+            let getOS = () => getRV()*cT+gan;
 
-            this.calculatorResult = getOS();
-            console.log(getOS());
+            this.calculatorResult = getOS().toFixed(2);
+            // console.log(cT);
+        },
+        getMinWeight: function ()
+        {
+            let min = 10;
+
+            if ( this.currentAirline == 'YAK' )
+                min = 10;
+            else if ( this.currentAirline == 'POL' )
+                min = 20;
+            else if ( this.currentAirline == 'AER' )
+                min = 20;
+
+            return min;
         }
     },
     watch: {
@@ -305,6 +319,12 @@ const calculator = new Vue({
             {
                 this.calculatorResult = 'Выберите данные';
                 this.calculatorDate = 'Даты';
+            }
+        },
+        shippingElements: {
+            deep: true,
+            handler: function (after) {
+                this.calculation();
             }
         }
     },
